@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Main Portal -->
+  <url>
+    <loc>https://pdf-craft.online/</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+  </url>
+  <!-- About Page -->
+  <url>
+    <loc>https://pdf-craft.online/about</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://pdf-craft.online/privacy</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <!-- Contact Page -->
+  <url>
+    <loc>https://pdf-craft.online/contact</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.50</priority>
+  </url>
+  <!-- Merge PDF -->
+  <url>
+    <loc>https://pdf-craft.online/merge-pdf</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Split PDF -->
+  <url>
+    <loc>https://pdf-craft.online/split-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Sign PDF -->
+  <url>
+    <loc>https://pdf-craft.online/sign-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Rotate PDF -->
+  <url>
+    <loc>https://pdf-craft.online/rotate-pdf</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Delete Pages -->
+  <url>
+    <loc>https://pdf-craft.online/delete-pages</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Images to PDF -->
+  <url>
+    <loc>https://pdf-craft.online/images-to-pdf</loc>
+    <lastmod>2026-11-05</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Reorder PDF -->
+  <url>
+    <loc>https://pdf-craft.online/reorder-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Compress PDF -->
+  <url>
+    <loc>https://pdf-craft.online/compress-pdf</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- PDF to Images -->
+  <url>
+    <loc>https://pdf-craft.online/pdf-to-images</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Protect PDF -->
+  <url>
+    <loc>https://pdf-craft.online/protect-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Unlock PDF -->
+  <url>
+    <loc>https://pdf-craft.online/unlock-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Security & Compliance -->
+  <url>
+    <loc>https://pdf-craft.online/security</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <!-- Guide: Merge PDF Offline -->
+  <!-- Guide: Sign PDF Locally -->
+  <!-- Guide: Remove PDF Password Offline -->
+  <!-- Guide: Compress PDF Offline -->
+  <!-- Guide: Convert JPG to PDF Locally -->
+  <!-- Guide: Split PDF Offline -->
+  <!-- Guide: How to Convert PDF to Images -->
+  <!-- Guide: How to Password Protect PDF -->
+  <!-- Guide: How to Delete PDF Pages -->
+  <!-- Guide: How to Rotate PDF Pages -->
+  <!-- Guide: How to Reorder PDF Pages -->
+  <!-- Tool: Number PDF -->
+  <url>
+    <loc>https://pdf-craft.online/number-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Tool: Watermark PDF -->
+  <url>
+    <loc>https://pdf-craft.online/watermark-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
+  <!-- Guide: Add Page Numbers to PDF Offline -->
+  <!-- Guide: Watermark PDF Offline -->
+
+  <url>
+    <loc>https://pdf-craft.online/how-to/safe-online-pdf-tools-confidential-documents</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pdf-craft.online/how-to/merge-and-split-pdf-without-uploading</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pdf-craft.online/how-to/organize-pdf-pages</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pdf-craft.online/how-to/convert-between-pdf-and-images</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pdf-craft.online/how-to/compress-pdf-without-losing-text</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pdf-craft.online/how-to/protect-pdf-with-password</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pdf-craft.online/how-to/redact-and-remove-pdf-content</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://pdf-craft.online/edit-pdf-text</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://pdf-craft.online/how-to/edit-existing-pdf-text</loc>
+    <lastmod>2026-11-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://pdf-craft.online/how-to/add-watermark-to-pdf</loc>
+    <lastmod>2026-11-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
+</urlset>
+
+

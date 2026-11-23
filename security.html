@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security & GDPR Compliance - PDFCraft | Private PDF Editor</title>
+    <meta name="description" content="Learn about PDFCraft's zero-server architecture. Your PDF files are processed entirely in your own browser and are never uploaded, transmitted, or stored.">
+    <link rel="canonical" href="https://pdf-craft.online/security">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+
+    
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pdf-craft.online/security">
+    <meta property="og:title" content="Security & GDPR Compliance - PDFCraft | Private PDF Editor">
+    <meta property="og:description" content="Learn about PDFCraft's zero-server architecture. Your PDF files are processed entirely in your own browser and are never uploaded, transmitted, or stored.">
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="opensearch.xml">
+</head>
+<body class="page-flow page-doc">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="/#tools">Tools</a>
+                <a href="/#guides">Guides</a>
+                <a href="/security">Security</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <header class="privacy-header">
+            <h1>Security & <span>Compliance</span></h1>
+            <p class="file-spec">Architecture, Privacy Audits & GDPR Compliance Standards</p>
+        </header>
+
+        <article class="privacy-content">
+            <p>Unlike traditional PDF utility platforms, PDFCraft is built around an uncompromising security principle: <strong>we never see, touch, or upload your files</strong>. All document editing, merging, splitting, and signing tasks run 100% client-side on your local device.</p>
+
+            <h2><i data-lucide="shield-check"></i> 1. Zero-Server Architecture</h2>
+            <p>Standard online PDF tools force you to upload your files to their backend servers. This exposes confidential information to risk of interception, unauthorized database logging, or security leaks. PDFCraft completely eliminates this threat vector by removing the server from the loop entirely.</p>
+            <ul>
+                <li><strong>Local Execution</strong>: All document operations are executed in your browser sandbox using JavaScript and native HTML5 APIs (the File API, Canvas, and Web Crypto).</li>
+                <li><strong>No Backend Storage</strong>: We do not maintain file storage servers, backend databases, or temporary conversion folders. Your document contents remain completely isolated inside your browser tab's sandbox memory.</li>
+                <li><strong>Self-Contained Library Load</strong>: The rendering engines (`pdf.js` and `pdf-lib`) are loaded dynamically into your client browser once and compute layouts locally on your CPU.</li>
+            </ul>
+
+            <div class="tech-box">
+                <h4>Technical Flow Overview</h4>
+                <p>You select a file &rarr; the browser reads it locally via the File API &rarr; <code>pdf-lib</code> and <code>pdf.js</code> modify the document in your tab's memory &rarr; the result is handed straight back to you as a browser download. <strong>Your file's contents generate zero network traffic at every step.</strong></p>
+            </div>
+
+            <h2><i data-lucide="activity"></i> 2. What does leave your browser</h2>
+            <p>Being precise about this matters more to us than sounding absolute. Your <em>documents</em> never leave your device. The <em>web page</em>, like most sites, does load third-party code:</p>
+            <ul>
+                <li><strong>Google Analytics</strong> records anonymous usage of the page itself &mdash; which tool you opened, which buttons you clicked. We removed Microsoft Clarity session recording in August 2026: recording how someone interacts with a confidential document, even without the document itself, was not compatible with the promise on this page.</li>
+                <li><strong>Google Fonts</strong> serves the typeface this site uses, which means your browser requests it from Google on each page load.</li>
+            </ul>
+            <p>As of August 2026 the PDF libraries are no longer among them. <code>pdf.js</code>, <code>pdf-lib</code>, JSZip and the icon set are all served from this domain rather than from jsDelivr or unpkg, at pinned versions. That removes three third parties from the code path that handles your documents and passwords, and it means an upstream CDN cannot change the code running on your file without a deploy from us.</p>
+            <p>Neither of them receives your file, its contents, or any password you enter &mdash; there is no code path in this site that transmits them. There is no advertising code on the site at all. If you would rather not send analytics, block third-party scripts or use a tracker blocker: <strong>every tool keeps working</strong>, because the PDF work does not depend on it. The web fonts come from a stylesheet rather than a script, so blocking <code>fonts.googleapis.com</code> is a separate step; the pages then fall back to a system typeface.</p>
+
+            <h2><i data-lucide="check-square"></i> 3. Why this helps with GDPR</h2>
+            <p>Under the General Data Protection Regulation (GDPR), sending files containing personally identifiable information (PII) to a third-party processor pulls that processor into your compliance scope &mdash; contracts, audits, transfer assessments. PDFCraft removes that step entirely:</p>
+            <ul>
+                <li>No personal data contained inside your files is processed on, stored by, or transmitted to any external server.</li>
+                <li>There are no international data transfers to assess for your document contents, because there is no hosting.</li>
+                <li>We employ no third-party subprocessors to read or convert your PDF documents.</li>
+            </ul>
+            <p>To be clear about what that does and does not mean: it removes a processor from your document workflow. It is not a compliance certification, and we are not in a position to offer one &mdash; if your organisation requires a formal assessment, treat this page as technical documentation for your own review, not as legal advice.</p>
+
+            <h2><i data-lucide="lock"></i> 4. Handling PHI and privileged documents</h2>
+            <p>For medical and legal professionals, uploading Protected Health Information or privileged material to a third-party platform is often prohibited outright by policy or contract. Because PDFCraft behaves like locally installed software rather than a service, that upload never happens:</p>
+            <ul>
+                <li>Your files remain on your device for the entire operation, so there is no transmission to intercept and no server-side copy to leak.</li>
+                <li>Because nothing is transmitted to or retained by us, we do not act as a processor of your documents.</li>
+            </ul>
+            <p>Whether that satisfies a specific obligation &mdash; including whether any agreement is required in your situation &mdash; is a determination for your own compliance officer, not for us. We will not tell you that you are HIPAA compliant; we will tell you exactly what the software does so you can decide.</p>
+
+            <h2><i data-lucide="wifi-off"></i> 5. Offline use (PWA)</h2>
+            <p>PDFCraft installs as a Progressive Web App, and the tools themselves need no server to run &mdash; the processing genuinely happens on your CPU.</p>
+            <ul>
+                <li>You can install the app from your browser's address bar and launch it in its own window.</li>
+                <li>Every library the tools depend on &mdash; including the <code>pdf.js</code> rendering worker, which was the piece that used to break offline &mdash; is now served from this domain and precached by the service worker. Load any tool page once, then disconnect: the tools keep working.</li>
+                <li><strong>What still needs the network, stated plainly:</strong> the web fonts and the analytics ping. Neither is required for a tool to run, so offline the pages simply render in a fallback typeface and send no analytics. If you find a tool that fails with the network off, that is a bug and we would like to hear about it.</li>
+            </ul>
+            <p>You do not have to take that on trust, and this is the easiest claim on the page to check: open a tool, turn off your wifi, and use it.</p>
+
+            <h2><i data-lucide="key-round"></i> 6. Cryptographic Protection</h2>
+            <p>Passwords are typed and processed entirely inside your browser, so they are never sent over the network. The specifics, since a vague claim here would be worse than none:</p>
+            <ul>
+                <li><strong>Protect PDF</strong> writes standard PDF encryption using <strong>RC4 128-bit</strong> (PDF security handler V2/R3). This is the widely compatible legacy scheme &mdash; it will open anywhere, but it is <em>not</em> resistant to a determined offline password-cracking attempt. For genuinely sensitive material, prefer AES-256 from desktop software, or an encrypted archive.</li>
+                <li><strong>Unlock PDF</strong> reads RC4 (R2/R3), AES-128 (R4) and AES-256 (R6). It does not support the older AES-256 variant (R5) or certificate-based encryption.</li>
+                <li>AES operations use your browser's native Web Crypto implementation; RC4 and the MD5 key derivation are implemented in JavaScript in <code>pdf-crypto.js</code>.</li>
+            </ul>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="/how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="/how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="/how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="/how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="/how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="/how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="/">All 14 tools</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

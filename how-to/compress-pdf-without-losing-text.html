@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="../favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Compress a PDF (and When Not To) - PDFCraft</title>
+    <meta name="description" content="PDFCraft's PDF compressor rasterizes every page to JPEG. See why that's great for scans, why it can make text PDFs bigger, and what to use instead.">
+    <link rel="canonical" href="https://pdf-craft.online/how-to/compress-pdf-without-losing-text">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+    
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pdf-craft.online/how-to/compress-pdf-without-losing-text">
+    <meta property="og:title" content="How to Compress a PDF (and When Not To) - PDFCraft">
+    <meta property="og:description" content="PDFCraft's PDF compressor rasterizes every page to JPEG. See why that's great for scans, why it can make text PDFs bigger, and what to use instead.">
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TechArticle Schema for Google Rich Snippets -->
+<link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="../opensearch.xml">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Compress a PDF (and When Not To)",
+  "description": "PDFCraft's PDF compressor rasterizes every page to JPEG. See why that's great for scans, why it can make text PDFs bigger, and what to use instead.",
+  "image": "https://pdf-craft.online/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pdf-craft.online/favicon-192x192.png"
+    }
+  },
+  "mainEntityOfPage": "https://pdf-craft.online/how-to/compress-pdf-without-losing-text",
+  "inLanguage": "en",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Why did my PDF get bigger after I compressed it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Almost certainly because it was a text or vector document, not a scan. Rasterizing compressors like PDFCraft's turn every page into a JPEG, which handles photographic detail well but is inefficient at sharp text edges, so a page that started as a few kilobytes of real text can become a 150-400 KB image. Use a source-app export preset or a desktop tool that recompresses images in place instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How small can I realistically get a scanned document?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A typical black-and-white or grayscale scan usually drops 70-90% at the Extreme setting (96 DPI, 40% quality), though small footnotes and fine print will show visible blur at that level. Recommended (150 DPI, 65%) is the safer default for anything you might need to read closely later."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I compress a password-protected PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly. Run Unlock PDF first to remove a password you know, then compress the unlocked file. Compression rebuilds the document from scratch, so it can't work on an encrypted file it can't read, and PDFCraft also refuses to re-protect an already-protected file, since that would destroy it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will compressing invalidate a digital signature?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Compression rebuilds the entire PDF around new image objects, changing the underlying file content, so any existing digital signature will show as invalid afterward. Compress a document before it gets signed, not after."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I get the selectable text back after I've already compressed a document?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not from the compressed file itself. Once a page is rasterized, the text only exists as pixels. Recovering it means running OCR on the images to regenerate a text layer, a separate process with its own accuracy limits, not something the compressor offers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a version of PDFCraft's compressor that skips rasterizing text pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not currently. It always renders full pages to JPEG, which is why this guide recommends a source-app export or a desktop tool such as Acrobat's \"Reduce File Size\" for any document where the text needs to survive."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="page-flow page-doc">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="/#tools">Tools</a>
+                <a href="/#guides">Guides</a>
+                <a href="/security">Security</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <header class="privacy-header">
+            <h1>How to Compress a PDF (and When Not To)</h1>
+            <p class="file-spec">PDFCraft's compressor turns every page into a JPEG &mdash; great for scans, wrong for contracts. Here's how to tell which one you have.</p>
+        </header>
+
+        <article class="privacy-content">
+<p>A 40-page scanned contract that won't fit under your email provider's 25 MB limit, and a 40-page Word-to-PDF export that grew from 600 KB to 4 MB after you "compressed" it, are two different problems. The first is exactly what a PDF compressor is for. The second is what happens when the wrong kind of compressor gets used on the wrong kind of file. Before running any tool on either one, it helps to know why PDFs get large in the first place, and which kind of compression fits your document.</p>
+
+<h2><i data-lucide="layers"></i> Why PDFs Get So Big</h2>
+<p>Four things usually drive file size, often together:</p>
+<ul>
+<li><strong>Embedded images at capture resolution.</strong> A phone photo runs 12-48 megapixels; a scanner defaults to 300 DPI color. A page read on screen or printed normally only needs 150-300 DPI, but the extra pixels get embedded anyway.</li>
+<li><strong>Scanned pages with no text layer.</strong> A photocopied or scanned page isn't text plus formatting, it's one large raster image. A single US Letter page scanned at 300 DPI is 2550x3300 pixels, about 8.4 megapixels, which holds roughly 25 MB of raw bitmap data in color, or about 8 MB in grayscale, before any PDF-level compression is applied.</li>
+<li><strong>Embedded font subsets.</strong> Every typeface used, even for a handful of characters, typically embeds its own glyph outlines so the page renders identically everywhere. Several font families and weights can add up fast.</li>
+<li><strong>Duplicated objects and accumulated cruft.</strong> A logo repeated on every page without being reused as one object, leftover thumbnails, incremental-save revision history, embedded color profiles, and verbose metadata all add weight unrelated to what's visible on the page.</li>
+</ul>
+<p>Scanned documents are dominated by the first two causes. Born-digital documents &mdash; anything exported from Word, Google Docs, InDesign, or similar &mdash; are usually dominated by the third and fourth, and their actual page content, real text plus vector graphics, is already extremely compact.</p>
+
+<h2><i data-lucide="image"></i> Compressing Images vs. Rasterizing the Whole Page</h2>
+<p>"Compress the PDF" can mean two very different operations, and the difference matters more than the percentage saved.</p>
+<p><strong>Recompressing images in place</strong> means finding the embedded photos inside the PDF, downsampling and re-encoding just those image objects, and leaving everything else untouched. Text stays as text, vector lines stay as vector lines, links and form fields keep working. This is what Adobe Acrobat's "Reduce File Size" and similar desktop tools do.</p>
+<p><strong>Rasterizing the page</strong> means rendering the entire page &mdash; text, vector graphics, form fields, everything &mdash; to one flat image, then rebuilding the PDF around it. It's effectively the same pipeline as running <a href="/pdf-to-images">PDF to Images</a> and feeding the results into an images-to-PDF conversion, done as one step. That's the right technique for a scan that was already just a picture. Applied to a page with real text on it, it throws the text away and replaces it with a picture of the text.</p>
+
+<h2><i data-lucide="alert-triangle"></i> What PDFCraft's Compressor Actually Does</h2>
+<p>PDFCraft's <a href="/compress-pdf">Compress PDF</a> tool takes the second approach. It renders every page to a canvas at your chosen resolution, re-encodes that canvas as a JPEG, and rebuilds the PDF around the resulting images, page by page, entirely in your browser. There's no partial approach: every page becomes a JPEG, whether it started as a scan or a paragraph of crisp digital text.</p>
+<p>For a scanned or photo-heavy PDF, this is close to ideal &mdash; the page was already a picture, so a smaller picture loses nothing you had. For a text document, contract, form, or anything that must stay searchable, selectable, or accessible, it's the wrong tool: the text layer is gone, so you can't select or search text, hyperlinks and form fields stop working, bookmarks are dropped, and a screen reader has nothing to read &mdash; it sees one image per page, not words.</p>
+<p>There's a size consequence too. JPEG is built for smooth photographic gradients, not the sharp black-on-white edges of rendered text. A dense text page rasterized at 150 DPI can easily produce a 150-400 KB JPEG. Multiply that across a document that started out a fraction of that size as real text, and the "compressed" file comes out larger than the original &mdash; an inherent property of turning text into pixels, not a bug specific to PDFCraft.</p>
+
+<blockquote><strong>Heads up:</strong> whichever level you choose, keep your original file. Open the compressed output afterward and check it still does what you need &mdash; try selecting a line of text, clicking a link, or tabbing into a form field. If any of that stopped working, you rasterized a document that needed to stay as text, and the fix is to start over from the original with a different approach, not to keep adjusting the compression level.</blockquote>
+
+<h2><i data-lucide="sliders-horizontal"></i> Choosing a Compression Level</h2>
+<p>PDFCraft offers three levels, each mapped to a resolution and a JPEG quality setting:</p>
+<table>
+<thead><tr><th>Level</th><th>Settings</th><th>Best for</th><th>Realistic outcome</th></tr></thead>
+<tbody>
+<tr><td>Low Compression</td><td>220 DPI, 85% quality</td><td>Photo-heavy pages you may reprint</td><td>Modest savings, roughly 15-35%; sharpness held onto</td></tr>
+<tr><td>Recommended</td><td>150 DPI, 65% quality</td><td>Standard scans, mixed text-and-photo pages</td><td>Solid savings, roughly 40-70% on scans; still readable</td></tr>
+<tr><td>Extreme</td><td>96 DPI, 40% quality</td><td>Scans you'll only view on screen</td><td>Large savings, 70-90% on scans; visible blur, small print can go blotchy</td></tr>
+</tbody>
+</table>
+<p>In real numbers: a 20-page black-and-white scan around 25 MB at 300 DPI typically lands around 4-7 MB at Recommended, under 2 MB at Extreme, usually still legible unless it had small dense footnotes. Run the same settings on a 20-page born-digital contract that started at 500 KB and expect a loss, not a win: all three will likely produce a larger file, because there's little to save and JPEG re-encoding adds overhead text-as-text never carried.</p>
+
+<h2><i data-lucide="check-circle"></i> Should You Use This Tool? A Decision Table</h2>
+<table>
+<thead><tr><th>Document type</th><th>Use this tool?</th><th>Expected outcome</th></tr></thead>
+<tbody>
+<tr><td>Scanned paper document</td><td>Yes</td><td>Large size reduction; looks the same at normal zoom</td></tr>
+<tr><td>Photo-heavy brochure or portfolio</td><td>Yes &mdash; Low or Recommended</td><td>Moderate reduction; use Low if you'll reprint it</td></tr>
+<tr><td>Screenshot-heavy report</td><td>Cautiously</td><td>Some reduction; small on-screen text can blur at Extreme</td></tr>
+<tr><td>Word/Google Docs export, resume, born-digital contract</td><td>No</td><td>File likely gets bigger; selectable text and links are lost</td></tr>
+<tr><td>Fillable PDF form</td><td>No</td><td>Form fields are flattened into an image and stop working</td></tr>
+<tr><td>Anything needed for e-discovery, OCR, or accessibility</td><td>No</td><td>Text layer and metadata removed, not just shrunk</td></tr>
+</tbody>
+</table>
+
+<h2><i data-lucide="file-text"></i> What to Do Instead for Text-Heavy PDFs</h2>
+<p>If your large file is a text document, the fix isn't a different compression setting &mdash; it's a different approach:</p>
+<ul>
+<li><strong>Export smaller from the source app.</strong> Word, Google Docs, InDesign, and most publishing tools offer a "smallest file size" or "web-optimized" PDF export preset. It downsamples embedded images to a sane resolution, typically around 150 DPI, at export time, while keeping actual text as text.</li>
+<li><strong>Downsample images before you build the PDF.</strong> If size comes from full-resolution photos pasted into a layout, resize them to the resolution you'll actually display &mdash; 150-200 DPI print, 96-150 DPI screen &mdash; before inserting, rather than letting the app embed a 4000-pixel original for a 3-inch placement.</li>
+<li><strong>Use a desktop tool that recompresses images in place.</strong> Adobe Acrobat's "Reduce File Size," and command-line tools such as Ghostscript's <code>pdfwrite</code> device, locate embedded image objects and re-encode just those, leaving text, links, and form fields intact. This is the category of tool PDFCraft's compressor is not.</li>
+</ul>
+<p>If the bloat comes from leftover objects picked up in an earlier merge, PDFCraft's <a href="/merge-pdf">Merge PDF</a> tool rebuilds a clean document by copying pages into a fresh file with pdf-lib, so orphaned objects do not carry over. It will not fix duplicate fonts, though &mdash; pdf-lib does not deduplicate resources across the files being merged, so combining several documents that share a typeface embeds that typeface once per source file, and the result can end up larger than the sum of the originals. See <a href="/how-to/merge-and-split-pdf-without-uploading">merging and splitting without uploading</a> for how that works. And if you're weighing compression against converting pages to standalone images for another workflow, <a href="/how-to/convert-between-pdf-and-images">converting between PDF and images</a> covers the same page-to-picture pipeline a rasterizing compressor uses internally, as a step you control yourself.</p>
+
+<h2><i data-lucide="help-circle"></i> Frequently Asked Questions</h2>
+
+<h3>Why did my PDF get bigger after I compressed it?</h3>
+<p>Almost certainly because it was a text or vector document, not a scan. Rasterizing compressors like PDFCraft's turn every page into a JPEG, which handles photographic detail well but is inefficient at sharp text edges, so a page that started as a few kilobytes of real text can become a 150-400 KB image. Use a source-app export preset or a desktop tool that recompresses images in place instead.</p>
+
+<h3>How small can I realistically get a scanned document?</h3>
+<p>A typical black-and-white or grayscale scan usually drops 70-90% at the Extreme setting (96 DPI, 40% quality), though small footnotes and fine print will show visible blur at that level. Recommended (150 DPI, 65%) is the safer default for anything you might need to read closely later.</p>
+
+<h3>Can I compress a password-protected PDF?</h3>
+<p>Not directly. Run <a href="/unlock-pdf">Unlock PDF</a> first to remove a password you know, then compress the unlocked file. Compression rebuilds the document from scratch, so it can't work on an encrypted file it can't read &mdash; and PDFCraft also refuses to re-protect an already-protected file, since that would destroy it.</p>
+
+<h3>Will compressing invalidate a digital signature?</h3>
+<p>Yes. Compression rebuilds the entire PDF around new image objects, changing the underlying file content, so any existing digital signature will show as invalid afterward. Compress a document before it gets signed, not after.</p>
+
+<h3>Can I get the selectable text back after I've already compressed a document?</h3>
+<p>Not from the compressed file itself. Once a page is rasterized, the text only exists as pixels. Recovering it means running OCR on the images to regenerate a text layer &mdash; a separate process with its own accuracy limits, not something the compressor offers.</p>
+
+<h3>Is there a version of PDFCraft's compressor that skips rasterizing text pages?</h3>
+<p>Not currently. It always renders full pages to JPEG, which is why this guide recommends a source-app export or a desktop tool such as Acrobat's "Reduce File Size" for any document where the text needs to survive.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="/how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="/how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="/how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="/how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="/how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="/how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="/">All 14 tools</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

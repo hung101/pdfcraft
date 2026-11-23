@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="../favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Watermark a PDF, and What a Watermark Won't Stop - PDFCraft</title>
+    <meta name="description" content="Add a DRAFT or CONFIDENTIAL watermark to a PDF in your browser. What a watermark really is inside the file, why it can be removed, and how to make it stick.">
+    <link rel="canonical" href="https://pdf-craft.online/how-to/add-watermark-to-pdf">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pdf-craft.online/how-to/add-watermark-to-pdf">
+    <meta property="og:title" content="How to Watermark a PDF, and What a Watermark Won't Stop - PDFCraft">
+    <meta property="og:description" content="Add a DRAFT or CONFIDENTIAL watermark to a PDF in your browser. What a watermark really is inside the file, why it can be removed, and how to make it stick.">
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TechArticle Schema for Google Rich Snippets -->
+<link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="../opensearch.xml">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Watermark a PDF, and What a Watermark Actually Does",
+  "description": "Add a DRAFT or CONFIDENTIAL watermark to a PDF in your browser. What a watermark really is inside the file, why it can be removed, and how to make it stick.",
+  "image": "https://pdf-craft.online/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pdf-craft.online/favicon-192x192.png"
+    }
+  },
+  "mainEntityOfPage": "https://pdf-craft.online/how-to/add-watermark-to-pdf",
+  "inLanguage": "en",
+  "datePublished": "2026-10-15",
+  "dateModified": "2026-10-15"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can someone remove a watermark from my PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. A watermark added here is one drawing instruction on each page, and anyone with a PDF editor can delete it. If it needs to be hard to remove, watermark the file and then run it through Compress PDF, which flattens every page to an image. That turns removal into editing pixels, at the cost of losing selectable text."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the watermark show up when someone copies text from the PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It can. The watermark is drawn as real text, so searches find it and text extraction reads it out alongside your content. Whether a particular copy picks it up depends on what is selected."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I watermark only some pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in one step: the tool applies the same mark to every page. Split out the pages you want marked, watermark that part, and merge the pieces back together in order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use a logo or image as the watermark?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not with this tool, which adds text only. Sign & Edit can place an image on individual pages instead, as an overlay on the pages you choose."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does a watermark make the file bigger?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Barely. The text uses a font that every PDF reader has built in, so nothing needs embedding. In our test, watermarking a two-page document added under 700 bytes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, once the page has loaded. The PDF library it uses is served from this site rather than a third-party CDN, so nothing has to be fetched while you work."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="page-flow page-doc">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="/#tools">Tools</a>
+                <a href="/#guides">Guides</a>
+                <a href="/security">Security</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <header class="privacy-header">
+            <h1>How to Watermark a PDF, and What a Watermark Actually Does</h1>
+            <p class="file-spec">Marking drafts and confidential copies without uploading them, and the limits worth knowing first</p>
+        </header>
+
+        <article class="privacy-content">
+<p>You are about to send a draft that must not be mistaken for the final version, or a confidential copy that should make its origin obvious if it travels further than intended. A watermark is the standard answer, and for those two jobs it works well. What it does not do is protect the document, though plenty of tools let you believe otherwise. This guide covers what a watermark actually is inside a PDF, how to add one here without the file leaving your device, and how to choose between a mark that is easy to read and one that is hard to remove.</p>
+
+<h2><i data-lucide="layers"></i> What a Watermark Is Inside the File</h2>
+
+<p>A PDF page is a list of drawing instructions, painted in order. Adding a watermark appends a few more to the end of each page's list: pick a font, set a transparency, position and rotate, then draw the text. Because those instructions come last, they are painted over everything already on the page. The see-through effect comes from a transparency setting on the drawing state rather than from a lighter colour, which is why the page underneath still shows.</p>
+
+<p>We checked this by running the tool itself on a test file rather than describing it from memory. A two-page document came back with one text instruction added to each page, last in paint order, and the original drawing instructions left exactly as they were; the only other change was to the file's metadata, where the producer name and modification date are updated. Two consequences follow, and both tend to surprise people.</p>
+
+<p><strong>The watermark is real text.</strong> It is drawn with a font, not pasted in as a picture, so a PDF reader treats it like any other text on the page. Search the document for "DRAFT" and every page matches. Select the whole page and copy it, and the word comes along. Text-extraction tools read it out alongside your content.</p>
+
+<p><strong>It barely changes the file size.</strong> The text is set in Helvetica, one of fourteen fonts that every PDF reader has built in, so no font has to be embedded in the file. In our test the whole two-page document grew by under 700 bytes.</p>
+
+<h2><i data-lucide="scale"></i> Three Jobs, Three Approaches</h2>
+
+<p>Most people reach for a watermark to do one of three things, and each wants different settings.</p>
+
+<table>
+<thead><tr><th>What you want</th><th>What to do</th><th>The trade-off</th></tr></thead>
+<tbody>
+<tr><td>Stop a draft being mistaken for the final</td><td>"DRAFT" at the defaults: size 50, 45 degrees, 30% opacity</td><td>Anyone with a PDF editor can delete it, which does not matter for this job</td></tr>
+<tr><td>Make a leaked copy traceable to its recipient</td><td>One line per recipient, such as "Prepared for J. Smith, 15 Oct 2026", run once for each copy</td><td>A deterrent only: it can be deleted, or cropped out of a screenshot</td></tr>
+<tr><td>Make the mark hard to strip out</td><td>Watermark first, then run the file through Compress PDF</td><td>Every page becomes an image, so text stops being selectable or searchable, and a text-heavy file can get bigger</td></tr>
+</tbody>
+</table>
+
+<p>The third row needs a word of explanation. <a href="/compress-pdf">Compress PDF</a> works by rendering every page to an image and rebuilding the document from those images (the <a href="/how-to/compress-pdf-without-losing-text">compression guide</a> explains why). After that, the watermark is no longer a separate instruction that can be deleted. It is pixels, mixed in with everything else on the page. That makes it far harder to remove, and it costs exactly what flattening always costs: nobody can select, search or copy the text any more, including you. Keep the unflattened original.</p>
+
+<h2><i data-lucide="droplet"></i> How to Add a Watermark Here</h2>
+
+<ol>
+<li>Open <a href="/watermark-pdf">Watermark PDF</a> and drop your file in. It is read by your browser; nothing is uploaded.</li>
+<li>Type the text. It is a single line, and "DRAFT" is filled in to start.</li>
+<li>Set the size (10 to 150), the opacity (5% to 100%), the angle in degrees (0 to 360, where 0 is level and 45 is the classic diagonal) and the colour.</li>
+<li>Apply it, download the result, and open it before you send it anywhere.</li>
+</ol>
+
+<p>The mark is centred on the visible page, including pages that have been rotated or cropped, and turns around its own centre, so it stays centred at any angle. There is no page-range option: every page gets the same mark. To watermark only part of a document, <a href="/split-pdf">split</a> out those pages, watermark them, and <a href="/merge-pdf">merge</a> the pieces back in order.</p>
+
+<h2><i data-lucide="sliders-horizontal"></i> Settings That Read Well</h2>
+
+<ul>
+<li><strong>Opacity around 20 to 30 percent.</strong> Enough to be unmistakable, faint enough that the page underneath stays readable. Push it much past half and the watermark starts to hide the content it is labelling.</li>
+<li><strong>Grey or a muted red rather than black.</strong> Black at low opacity reads as grey anyway; a colour separates the mark from the body text more clearly.</li>
+<li><strong>Size it to the length of the text.</strong> The tool centres your text but does not shrink it to fit. A short word like DRAFT is about 170 points wide at the default size of 50, comfortably inside an A4 page, which is 595 points across. A full line is a different story: "Prepared for Jane Smith, 15 Oct 2026" measures about 840 points at size 50 and runs off the page. At 30 it is about 500 points and fits. As a rule, keep single words at 50 and full lines between 25 and 30.</li>
+<li><strong>45 degrees for a diagonal, 0 for a level line.</strong> The angle is measured as the page is displayed, so it comes out right on pages that have been rotated, too. A level line is easier to read; a diagonal is the convention most people recognise as a watermark.</li>
+</ul>
+
+<h2><i data-lucide="alert-triangle"></i> What a Watermark Will Not Do</h2>
+
+<ul>
+<li><strong>It does not stop anyone copying the text.</strong> Everything underneath stays exactly as selectable as it was. The watermark adds a word to what gets copied; it takes nothing away.</li>
+<li><strong>It can be deleted.</strong> It is one instruction per page, and anyone with an editor that can remove page content can remove it in a minute.</li>
+<li><strong>It is not a tracking code.</strong> The watermark carries no hidden fingerprint: it is exactly the text you can see, which is why a per-recipient line only works if the recipient's name is actually in it.</li>
+<li><strong>A screenshot keeps it; retyping does not.</strong> A screenshot carries the watermark along with the page, which is part of its value. Someone who retypes the text, or crops the mark out of a picture, leaves it behind.</li>
+<li><strong>Western European characters only.</strong> The built-in Helvetica covers English and the main Western European languages. Letters such as Ł, č, ş and ő, and Greek, Cyrillic, Chinese, Japanese, Korean or Arabic text, stop with an error, and no file is produced.</li>
+<li><strong>Password-protected files must be unlocked first.</strong> The tool cannot open an encrypted document, so it stops before changing anything. Use <a href="/unlock-pdf">Unlock PDF</a> first: a file that opens without a password unlocks without one, and otherwise you need to know the password.</li>
+</ul>
+
+<blockquote><strong>Heads up:</strong> if the real worry is that the document must not leak, a watermark is the wrong primary tool. Control who receives the file, put a password on it, and treat the watermark as the label on top. <a href="/how-to/protect-pdf-with-password">How PDF password protection actually works</a> covers the part that does the protecting, including its own limits.</blockquote>
+
+<h2><i data-lucide="list-ordered"></i> Order of Operations</h2>
+
+<p>When a file goes through several tools, the order matters:</p>
+
+<ol>
+<li><strong>Edit, reorder, number and watermark first.</strong> Page numbers and watermarks are both drawn on top of the page, so either can go first.</li>
+<li><strong>Flatten next, if you want the mark baked in.</strong> Compress PDF turns every page into an image, watermark included. Nothing after this step can change the text, so do it once everything else is final.</li>
+<li><strong>Add a password last.</strong> The editing tools here refuse encrypted files, so encryption has to be the final step.</li>
+</ol>
+
+<h2><i data-lucide="check-circle"></i> Checking the Result</h2>
+
+<ol>
+<li><strong>Look at the first and last pages.</strong> Confirm the mark sits fully on the page and is not clipped at the edges, especially if you typed a long line.</li>
+<li><strong>Search for the watermark word.</strong> Every page should match. If you flattened the file, no page will, because there is no text left to search.</li>
+<li><strong>Check that the page underneath is still readable</strong> at the size the recipient will see it, on a phone as well as a monitor.</li>
+</ol>
+
+<h2><i data-lucide="shield"></i> Why Doing This Locally Matters</h2>
+
+<p>The documents people watermark are, almost by definition, the ones they would rather not hand to a stranger: draft contracts, internal reports, confidential copies. A watermarking service that works by upload has to receive the whole document in order to add one word to it.</p>
+
+<p>Here the work happens in your browser tab. The file is read from your disk, the watermark is added in memory, and the result comes back to you as a download. If you want to verify that rather than take it on trust, <a href="/how-to/safe-online-pdf-tools-confidential-documents">are online PDF tools safe for confidential documents?</a> shows how to check any tool, including this one.</p>
+
+<h2><i data-lucide="help-circle"></i> Frequently Asked Questions</h2>
+
+<h3>Can someone remove a watermark from my PDF?</h3>
+<p>Yes. A watermark added here is one drawing instruction on each page, and anyone with a PDF editor can delete it. If it needs to be hard to remove, watermark the file and then run it through Compress PDF, which flattens every page to an image. That turns removal into editing pixels, at the cost of losing selectable text.</p>
+
+<h3>Will the watermark show up when someone copies text from the PDF?</h3>
+<p>It can. The watermark is drawn as real text, so searches find it and text extraction reads it out alongside your content. Whether a particular copy picks it up depends on what is selected.</p>
+
+<h3>Can I watermark only some pages?</h3>
+<p>Not in one step: the tool applies the same mark to every page. Split out the pages you want marked, watermark that part, and merge the pieces back together in order.</p>
+
+<h3>Can I use a logo or image as the watermark?</h3>
+<p>Not with this tool, which adds text only. <a href="/sign-pdf">Sign &amp; Edit</a> can place an image on individual pages instead, as an overlay on the pages you choose.</p>
+
+<h3>Does a watermark make the file bigger?</h3>
+<p>Barely. The text uses a font that every PDF reader has built in, so nothing needs embedding. In our test, watermarking a two-page document added under 700 bytes.</p>
+
+<h3>Does this work offline?</h3>
+<p>Yes, once the page has loaded. The PDF library it uses is served from this site rather than a third-party CDN, so nothing has to be fetched while you work.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="/how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="/how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="/how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="/how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="/how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="/how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="/">All 14 tools</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

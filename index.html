@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDFCraft - Free Private Online PDF Editor (Merge, Split, Sign)</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="PDFCraft - Free Private Online PDF Editor (Merge, Split, Sign)">
+    <meta name="description" content="Free online PDF tools running 100% locally in your browser. Merge, split, sign, and edit PDF files in your browser. Your documents are never uploaded to a server.">
+    <meta name="keywords" content="free online pdf editor, merge pdf privately, split pdf locally, sign pdf online, offline pdf tools, browser pdf editor, pdf-craft, pdfcraft, edit pdf text, compress pdf">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://pdf-craft.online/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pdf-craft.online/">
+    <meta property="og:title" content="PDFCraft - Free Private Online PDF Editor">
+    <meta property="og:description" content="Merge, split, sign, and edit PDF files in your browser. Your documents are never uploaded to a server.">
+    <meta property="og:site_name" content="PDFCraft">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pdf-craft.online/">
+    <meta property="twitter:title" content="PDFCraft - Free Private Online PDF Editor">
+    <meta property="twitter:description" content="Merge, split, sign, and edit PDF files in your browser. Your documents are never uploaded to a server.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    <!-- PDF.js CDN -->
+    
+    <!-- pdf-lib CDN -->
+    
+    
+    <!-- Icons & Theme -->
+    <!-- Import Map for dynamic imports of pdf-lib -->
+    <script type="importmap">
+    {
+      "imports": {
+        "pdf-lib": "/lib/pdf-lib-1.17.1.esm.js"
+      }
+    }
+    </script>
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#ECEEF0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1E2125" media="(prefers-color-scheme: dark)">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+
+    
+
+        <!-- Google Sitelinks Searchbox Schema -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/",
+    "alternateName": [
+        "PDF Craft",
+        "PDFCraft Online",
+        "pdf-craft.online"
+    ],
+    "description": "Free PDF tools that run entirely in your browser. Merge, split, compress, protect and edit PDF files without uploading them.",
+    "inLanguage": "en"
+}
+    </script>
+
+    <!-- Organization Schema -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/",
+    "logo": "https://pdf-craft.online/favicon-192x192.png",
+    "sameAs": [
+        "https://ko-fi.com/pdfcraft"
+    ],
+    "alternateName": [
+        "PDF Craft",
+        "PDFCraft Online"
+    ],
+    "description": "PDFCraft builds browser-based PDF tools that process files locally on the visitor\u2019s own device instead of uploading them to a server."
+}
+    </script>
+
+    <!-- Schema.org JSON-LD structured data -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PDFCraft - Free Private Online PDF Editor",
+    "url": "https://pdf-craft.online/",
+    "description": "Free online PDF tools running 100% locally in your browser. Merge, split, sign, edit, compress, protect and unlock PDF files without uploading them to a server.",
+    "applicationCategory": "Utility",
+    "operatingSystem": "All",
+    "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+    },
+    "featureList": [
+        "Merge PDF files online free",
+        "Split PDF pages locally",
+        "Sign PDF documents securely",
+        "Rotate PDF pages online",
+        "Delete pages from PDF free",
+        "Compress PDF file sizes offline",
+        "Reorder PDF pages visually",
+        "Convert PDF pages to PNG/JPG images",
+        "Password protect PDF documents locally",
+        "Unlock password protected PDF files offline"
+    ]
+}
+    </script>
+    <!-- FAQ Schema for search rich snippets -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Is PDFCraft really free to use?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. PDFCraft is free, with no subscription, no account, and no PDFCraft watermark stamped on anything you download. There is no file size limit beyond what your own device's memory can handle. The site carries no advertising: hosting is paid out of pocket, with voluntary donations helping to offset it."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can I edit my PDFs offline?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Open PDFCraft once while you're online and give it a few seconds: it saves every tool in your browser, and after that they work without an internet connection. Installing it is optional. Chrome and Edge offer an install button in the address bar; Safari has Add to Home Screen on iPhone and Add to Dock on Mac."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Are my documents uploaded to a server?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. All file processing, rendering, and downloading happen entirely inside your browser tab on your local CPU. Your files are never sent to a backend server or stored anywhere online."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I use PDFCraft with GDPR- or HIPAA-sensitive documents?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Because PDFCraft processes everything locally and never uploads, stores, or transmits your documents, no third-party processor ever receives them — which is usually the step that creates a GDPR or HIPAA problem. That removes the external-transfer risk, but it is not a compliance certification and nothing here is legal advice: whether a given workflow meets your obligations is a decision for your own compliance team."
+            }
+        }
+    ]
+}
+    </script>
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="opensearch.xml">
+</head>
+<body class="page-flow">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="#guides">Guides</a>
+                <a href="security">Security</a>
+                <a href="about">About</a>
+                <button id="theme-toggle" class="btn-icon" type="button" title="Switch between light and dark" aria-label="Switch between light and dark">
+                    <i data-lucide="sun"></i>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main class="home-main wrap">
+        <div class="home-intro">
+            <h1>PDFCraft: edit, merge and sign PDFs without uploading them.</h1>
+            <p class="lede">Fourteen free tools that run inside this browser tab. No account, nothing to install, and your file never leaves your device.</p>
+            <div class="home-actions">
+                <a class="btn btn-primary" href="edit-pdf-text"><i data-lucide="type"></i>Edit a PDF&rsquo;s text</a>
+                <a class="text-link" href="#tools">See all 14 tools</a>
+            </div>
+        </div>
+
+        <!-- Tools, grouped by what they do to the file. Each group takes one process ink. -->
+        <div class="tool-groups" id="tools">
+            <section class="group-c" aria-labelledby="group-edit">
+                <div class="group-head">
+                    <span class="patch" aria-hidden="true"></span>
+                    <h2 id="group-edit">Edit and mark</h2>
+                </div>
+                <ul class="sheets">
+                    <li><a class="tile" href="edit-pdf-text">
+                        <div class="page">
+                            <h3>Edit PDF Text</h3>
+                            <p>Replace words already in a PDF. The old text is removed, not covered over.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><path class="t" d="M0 5H128M0 13H120M0 21H126M0 37H118M0 45H124M0 53H70"/><path class="t" d="M0 29H22M84 29H126"/><path class="ik" d="M28 29H74"/><path class="ik1" d="M79 22V36"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="sign-pdf">
+                        <div class="page">
+                            <h3>Sign &amp; Edit</h3>
+                            <p>Add a signature, text, drawings or highlights.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><path class="t" d="M0 5H128M0 13H116M0 21H90"/><path class="ar" d="M0 56H78"/><path class="ik1" d="M4 50C9 39 15 31 17 37S11 53 19 49S29 35 32 41S31 51 37 47S45 37 48 42S49 49 55 45S63 39 72 41"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="watermark-pdf">
+                        <div class="page">
+                            <h3>Watermark PDF</h3>
+                            <p>Stamp text such as DRAFT or CONFIDENTIAL across every page.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><path class="t" d="M0 5H128M0 13H120M0 21H126M0 29H116M0 37H128M0 45H122M0 53H88"/><text class="wm" x="64" y="39" text-anchor="middle" transform="rotate(-14 64 30)">DRAFT</text></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="number-pdf">
+                        <div class="page">
+                            <h3>Number PDF</h3>
+                            <p>Add page numbers where you want them, in your format.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><path class="t" d="M0 5H128M0 13H120M0 21H126M0 29H104"/><text class="lb" x="64" y="55" text-anchor="middle">Page 3 of 8</text></svg>
+                        </div>
+                    </a></li>
+                </ul>
+            </section>
+            <section class="group-m" aria-labelledby="group-organize">
+                <div class="group-head">
+                    <span class="patch" aria-hidden="true"></span>
+                    <h2 id="group-organize">Organize pages</h2>
+                </div>
+                <ul class="sheets">
+                    <li><a class="tile" href="merge-pdf">
+                        <div class="page">
+                            <h3>Merge PDF</h3>
+                            <p>Combine several PDFs into one, in the order you choose.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="2" y="16" width="22" height="31"/><path class="ts" d="M6 23h14M6 28h14M6 33h9"/><rect class="pg" x="30" y="16" width="22" height="31"/><path class="ts" d="M34 23h14M34 28h14M34 33h9"/><path class="ar" d="M60 31H78M74 27l4 4-4 4"/><rect class="pgi" x="88" y="11" width="22" height="31"/><path class="ts" d="M92 18h14M92 23h14M92 28h9"/><rect class="pgi" x="96" y="19" width="22" height="31"/><path class="ts" d="M100 26h14M100 31h14M100 36h9"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="split-pdf">
+                        <div class="page">
+                            <h3>Split PDF</h3>
+                            <p>Pull out chosen pages, or give every page its own file.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="2" y="16" width="22" height="31"/><path class="ts" d="M6 23h14M6 28h14M6 33h9"/><rect class="pg" x="28" y="16" width="22" height="31"/><path class="ts" d="M32 23h14M32 28h14M32 33h9"/><path class="ik1 dash" d="M61 6V58"/><rect class="pgi" x="74" y="16" width="22" height="31"/><path class="ts" d="M78 23h14M78 28h14M78 33h9"/><rect class="pgi" x="100" y="16" width="22" height="31"/><path class="ts" d="M104 23h14M104 28h14M104 33h9"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="reorder-pdf">
+                        <div class="page">
+                            <h3>Reorder PDF</h3>
+                            <p>Drag pages into a new order.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="4" y="27" width="22" height="31"/><text class="n" x="15" y="47" text-anchor="middle">1</text><rect class="pgi dash" x="34" y="27" width="22" height="31"/><rect class="pg" x="64" y="27" width="22" height="31"/><text class="n" x="75" y="47" text-anchor="middle">3</text><rect class="pg" x="94" y="27" width="22" height="31"/><text class="n" x="105" y="47" text-anchor="middle">4</text><g transform="rotate(-10 45 19.5)"><rect class="pgi" x="34" y="4" width="22" height="31"/><text class="n on" x="45" y="24" text-anchor="middle">2</text></g></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="rotate-pdf">
+                        <div class="page">
+                            <h3>Rotate PDF</h3>
+                            <p>Turn pages clockwise or counter-clockwise.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="10" y="15" width="22" height="31"/><path class="ts" d="M14 22h14M14 27h14M14 32h9"/><path class="ar" d="M42 22C50 10 66 10 74 20M74 20l-.3-5M74 20l-4.8-1.4"/><rect class="pgi" x="84" y="24" width="31" height="22"/><path class="ts" d="M108 28v14M103 28v14M98 28v9"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="delete-pages">
+                        <div class="page">
+                            <h3>Delete Pages</h3>
+                            <p>Remove the pages you don&rsquo;t need.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="8" y="15" width="22" height="31"/><path class="ts" d="M12 22h14M12 27h14M12 32h9"/><rect class="pgi dash" x="53" y="15" width="22" height="31"/><path class="ik1" d="M58 21L70 40M70 21L58 40"/><rect class="pg" x="98" y="15" width="22" height="31"/><path class="ts" d="M102 22h14M102 27h14M102 32h9"/></svg>
+                        </div>
+                    </a></li>
+                </ul>
+            </section>
+            <section class="group-y" aria-labelledby="group-convert">
+                <div class="group-head">
+                    <span class="patch" aria-hidden="true"></span>
+                    <h2 id="group-convert">Convert and compress</h2>
+                </div>
+                <ul class="sheets">
+                    <li><a class="tile" href="images-to-pdf">
+                        <div class="page">
+                            <h3>Images to PDF</h3>
+                            <p>Turn JPG, PNG or WebP images into one PDF.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="4" y="18" width="36" height="26"/><path class="ikf" d="M6 42L14.8 28.92L22 36.2L27.04 32.3L38 42Z"/><circle class="ikf" cx="32.08" cy="25.28" r="2.57143"/><path class="ar" d="M48 31H66M62 27l4 4-4 4"/><rect class="pg" x="80" y="6" width="34" height="48"/><rect class="pg" x="84" y="10" width="26" height="19"/><path class="ikf" d="M86 27L91.8 17.98L97 23.3L100.64 20.45L108 27Z"/><circle class="ikf" cx="104.28" cy="15.32" r="2"/><path class="ts" d="M84 36h26M84 41h26M84 46h17"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="pdf-to-images">
+                        <div class="page">
+                            <h3>PDF to Images</h3>
+                            <p>Save every page as a JPEG or PNG.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="6" y="6" width="34" height="48"/><path class="ts" d="M11 13h24M11 18h24M11 23h24M11 28h16M11 35h24M11 40h24M11 45h19"/><path class="ar" d="M50 31H68M64 27l4 4-4 4"/><rect class="pg" x="78" y="8" width="36" height="26"/><path class="ikf" d="M80 32L88.8 18.92L96 26.2L101.04 22.3L112 32Z"/><circle class="ikf" cx="106.08" cy="15.28" r="2.57143"/><rect class="pg" x="88" y="26" width="36" height="26"/><path class="ikf" d="M90 50L98.8 36.92L106 44.2L111.04 40.3L122 50Z"/><circle class="ikf" cx="116.08" cy="33.28" r="2.57143"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="compress-pdf">
+                        <div class="page">
+                            <h3>Compress PDF</h3>
+                            <p>Make the file smaller by re-rendering each page.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><rect class="pg" x="6" y="6" width="34" height="48"/><path class="ts" d="M11 13h24M11 18h24M11 23h24M11 28h16M11 35h24M11 40h24M11 45h19"/><path class="ar" d="M50 31H68M64 27l4 4-4 4"/><rect class="pg" x="82" y="14" width="26" height="37"/><g class="ikf"><circle cx="86.5" cy="20" r="1.15"/><circle cx="89.7" cy="20" r="1.15"/><circle cx="92.9" cy="20" r="1.15"/><circle cx="96.1" cy="20" r="1.15"/><circle cx="99.3" cy="20" r="1.15"/><circle cx="102.5" cy="20" r="1.15"/><circle cx="86.5" cy="25" r="1.15"/><circle cx="89.7" cy="25" r="1.15"/><circle cx="92.9" cy="25" r="1.15"/><circle cx="96.1" cy="25" r="1.15"/><circle cx="99.3" cy="25" r="1.15"/><circle cx="102.5" cy="25" r="1.15"/><circle cx="86.5" cy="30" r="1.15"/><circle cx="89.7" cy="30" r="1.15"/><circle cx="92.9" cy="30" r="1.15"/><circle cx="96.1" cy="30" r="1.15"/><circle cx="99.3" cy="30" r="1.15"/><circle cx="102.5" cy="30" r="1.15"/><circle cx="86.5" cy="35" r="1.15"/><circle cx="89.7" cy="35" r="1.15"/><circle cx="92.9" cy="35" r="1.15"/><circle cx="96.1" cy="35" r="1.15"/><circle cx="99.3" cy="35" r="1.15"/><circle cx="102.5" cy="35" r="1.15"/><circle cx="86.5" cy="40" r="1.15"/><circle cx="89.7" cy="40" r="1.15"/><circle cx="92.9" cy="40" r="1.15"/><circle cx="96.1" cy="40" r="1.15"/></g></svg>
+                        </div>
+                    </a></li>
+                </ul>
+            </section>
+            <section class="group-k" aria-labelledby="group-secure">
+                <div class="group-head">
+                    <span class="patch" aria-hidden="true"></span>
+                    <h2 id="group-secure">Passwords</h2>
+                </div>
+                <ul class="sheets">
+                    <li><a class="tile" href="protect-pdf">
+                        <div class="page">
+                            <h3>Protect PDF</h3>
+                            <p>Add a password that is needed to open the file.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><path class="t" d="M0 5H128M0 13H120M0 21H126M0 29H116M0 37H128M0 45H122M0 53H36"/><rect class="ko" x="48" y="14" width="32" height="42"/><rect class="ikf" x="52" y="32" width="24" height="19" rx="1.5"/><circle class="ko" cx="64" cy="40" r="2.4"/><rect class="ko" x="63" y="41" width="2" height="5"/><path class="ikl" d="M57 33v-6a7 7 0 0 1 14 0v6"/></svg>
+                        </div>
+                    </a></li>
+                    <li><a class="tile" href="unlock-pdf">
+                        <div class="page">
+                            <h3>Unlock PDF</h3>
+                            <p>Remove the password from a PDF when you know it.</p>
+                            <svg class="fig" viewBox="0 0 128 60" aria-hidden="true" focusable="false"><path class="t" d="M0 5H128M0 13H120M0 21H126M0 29H116M0 37H128M0 45H122M0 53H36"/><rect class="ko" x="48" y="14" width="32" height="42"/><rect class="ikf" x="52" y="32" width="24" height="19" rx="1.5"/><circle class="ko" cx="64" cy="40" r="2.4"/><rect class="ko" x="63" y="41" width="2" height="5"/><path class="ikl" d="M57 33v-9a7 7 0 0 1 14 0v1"/></svg>
+                        </div>
+                    </a></li>
+                </ul>
+            </section>
+        </div>
+
+        <aside class="home-proof" aria-labelledby="proof-title">
+            <h2 id="proof-title">Check it yourself</h2>
+            <ol>
+                <li><span><strong>Load this page</strong> and give it a few seconds to save the tools.</span></li>
+                <li><span><strong>Switch off Wi-Fi</strong>, or turn on airplane mode.</span></li>
+                <li><span><strong>Open any tool and add a PDF.</strong> It still works, because your file is never sent anywhere.</span></li>
+            </ol>
+        </aside>
+
+        <div class="home-about">
+            <section class="home-why" aria-labelledby="why-title">
+                <h2 id="why-title">Private, Browser-Based PDF Tools</h2>
+                <div>
+                    <h3>Local Processing</h3>
+                    <p>Unlike other online PDF converters, PDFCraft processes all your files directly in your web browser. Your sensitive documents are never uploaded to any remote server.</p>
+                </div>
+                <div>
+                    <h3>No Server Copy</h3>
+                    <p>Because there is no upload step, your document never reaches a server we control, so there is no stored copy to leak. The site does run Google Analytics, which records anonymous visits and which tools are used but never receives your file; the <a class="text-link" href="security">security page</a> lists exactly what it sees. Keeping files off servers removes the transfer step that usually causes the difficulty under GDPR, HIPAA or corporate confidentiality rules, though it is not a compliance certification.</p>
+                </div>
+                <div>
+                    <h3>Works Offline</h3>
+                    <p>Your first visit saves every tool in your browser, so they keep working without an internet connection. Only the typeface and the analytics need the network, and no tool depends on either.</p>
+                </div>
+            </section>
+
+            <section class="home-faq" aria-labelledby="faq-title">
+                <h2 id="faq-title">Frequently Asked Questions</h2>
+                <div class="faq-accordion">
+                <details class="faq-item">
+                    <summary>Is PDFCraft really free to use?</summary>
+                    <div class="faq-content">
+                        Yes. PDFCraft is free, with no subscription, no account, and no PDFCraft watermark stamped on anything you download. There is no file size limit beyond what your own device's memory can handle. The site carries no advertising: hosting is paid out of pocket, with voluntary donations helping to offset it.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>How can I edit my PDFs offline?</summary>
+                    <div class="faq-content">
+                        Open PDFCraft once while you're online and give it a few seconds: it saves every tool in your browser, and after that they work without an internet connection. Installing it is optional. Chrome and Edge offer an install button in the address bar; Safari has Add to Home Screen on iPhone and Add to Dock on Mac.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Are my documents uploaded to a server?</summary>
+                    <div class="faq-content">
+                        No. All file processing, rendering, and downloading happen entirely inside your browser tab on your local CPU. Your files are never sent to a backend server or stored anywhere online.
+                    </div>
+                </details>
+                <details class="faq-item">
+                    <summary>Can I use PDFCraft with GDPR- or HIPAA-sensitive documents?</summary>
+                    <div class="faq-content">
+                        Because PDFCraft processes everything locally and never uploads, stores, or transmits your documents, no third-party processor ever receives them — which is usually the step that creates a GDPR or HIPAA problem. That removes the external-transfer risk, but it is not a compliance certification and nothing here is legal advice: whether a given workflow meets your obligations is a decision for your own compliance team.
+                    </div>
+                </details>
+            </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides" id="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="privacy">Privacy</a></li>
+                        <li><a href="security">Security</a></li>
+                        <li><a href="about">About</a></li>
+                        <li><a href="contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+    <!-- The tools' own panels. Hidden here; app.js still wires them up. -->
+    <div class="tool-content" hidden>
+                <!-- Merge Tab -->
+                <section id="tab-merge" class="tab-panel">
+                    <!-- Drop Zone -->
+                    <div class="drop-zone" id="merge-drop-zone">
+                        <input type="file" id="merge-file-input" multiple accept=".pdf" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon-wrapper">
+                                <i data-lucide="upload-cloud"></i>
+                            </div>
+                            <h3>Drag & drop your PDFs here</h3>
+                            <p>or <span class="highlight">browse your files</span></p>
+                            <span class="file-spec">Supports multiple PDF files</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Files Workspace (Hidden initially) -->
+                    <div class="workspace-card" id="merge-workspace" style="display: none;">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="badge" id="merge-file-count">0 Files Selected</span>
+                            </div>
+                            <div class="card-header-actions">
+                                <button class="btn btn-secondary" id="merge-clear-btn">
+                                    <i data-lucide="trash-2"></i> Clear All
+                                </button>
+                                <button class="btn btn-secondary" id="merge-add-more-btn">
+                                    <i data-lucide="plus"></i> Add Files
+                                    <input type="file" id="merge-add-input" multiple accept=".pdf" style="display:none;">
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Grid representing uploaded files to merge -->
+                        <div class="files-grid" id="merge-files-list"></div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-large" id="merge-action-btn">
+                                <i data-lucide="merge"></i> Merge & Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Split Tab -->
+                <section id="tab-split" class="tab-panel">
+                    <!-- Drop Zone -->
+                    <div class="drop-zone" id="split-drop-zone">
+                        <input type="file" id="split-file-input" accept=".pdf" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon-wrapper">
+                                <i data-lucide="scissors"></i>
+                            </div>
+                            <h3>Drag & drop a PDF to split</h3>
+                            <p>or <span class="highlight">browse your files</span></p>
+                            <span class="file-spec">Single PDF file — limited only by your device memory</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Split Workspace -->
+                    <div class="workspace-card" id="split-workspace" style="display: none;">
+                        <div class="card-header">
+                            <span class="badge" id="split-file-name">file.pdf</span>
+                            <div class="card-header-actions">
+                                <button class="btn btn-secondary" id="split-reset-btn">
+                                    <i data-lucide="arrow-left"></i> Choose Another File
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="split-controls-layout">
+                            <!-- Left: Options Column -->
+                            <div class="split-sidebar-options">
+                                <h3>Split Configuration</h3>
+                                <div class="option-group">
+                                    <label>Split Method</label>
+                                    <div class="radio-group">
+                                        <label class="radio-container">
+                                            <input type="radio" name="split-method" value="range" checked>
+                                            <span class="radio-label">Extract Specific Pages</span>
+                                        </label>
+                                        <label class="radio-container">
+                                            <input type="radio" name="split-method" value="all">
+                                            <span class="radio-label">Split every page into separate PDFs</span>
+                                        </label>
+                                    </div>
+                                </div>
+
+                                <div class="option-group" id="range-input-group">
+                                    <label for="split-ranges">Page Ranges</label>
+                                    <input type="text" id="split-ranges" placeholder="e.g. 1-3, 5, 8-10" value="1">
+                                    <p class="helper-text">Use commas to separate page numbers or ranges (e.g. 1-3, 5).</p>
+                                </div>
+
+                                <div class="selection-summary">
+                                    <div class="summary-row">
+                                        <span>Total Pages:</span>
+                                        <span id="split-total-pages">0</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Selected Pages:</span>
+                                        <span id="split-selected-count">0</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Right: Visual Page Picker Grid -->
+                            <div class="split-pages-preview-container">
+                                <div class="preview-actions">
+                                    <button class="btn btn-sm btn-secondary" id="split-select-all-btn">Select All</button>
+                                    <button class="btn btn-sm btn-secondary" id="split-deselect-all-btn">Clear Selection</button>
+                                </div>
+                                <div class="pages-grid" id="split-pages-list"></div>
+                            </div>
+                        </div>
+
+
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-large" id="split-action-btn">
+                                <i data-lucide="download"></i> Extract & Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Edit / Sign Tab -->
+                <section id="tab-edit" class="tab-panel">
+                    <!-- Drop Zone -->
+                    <div class="drop-zone" id="edit-drop-zone">
+                        <input type="file" id="edit-file-input" accept=".pdf" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon-wrapper">
+                                <i data-lucide="pen-tool"></i>
+                            </div>
+                            <h3>Drag & drop a PDF to Sign or Edit</h3>
+                            <p>or <span class="highlight">browse your files</span></p>
+                            <span class="file-spec">Add signature, initials, or text overlays</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Edit Workspace -->
+                    <div class="workspace-card" id="edit-workspace" style="display: none;">
+                        <div class="card-header">
+                            <span class="badge" id="edit-file-name">file.pdf</span>
+                            <div class="card-header-actions">
+                                <button class="btn btn-secondary" id="edit-reset-btn">
+                                    <i data-lucide="arrow-left"></i> Choose Another File
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="editor-toolbar">
+                            <div class="toolbar-group">
+                                <button class="btn btn-toolbar" id="add-text-btn">
+                                    <i data-lucide="type"></i> Add Text
+                                </button>
+                                <button class="btn btn-toolbar" id="add-sign-btn">
+                                    <i data-lucide="signature"></i> Add Signature
+                                </button>
+                            </div>
+                            
+                            <!-- Zoom Controls -->
+                            <div class="toolbar-group zoom-controls" style="display: flex; gap: 0.5rem; align-items: center;">
+                                <button class="btn btn-toolbar" id="zoom-out-btn" title="Zoom Out" style="padding: 0.5rem; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="zoom-out" style="width: 16px; height: 16px;"></i>
+                                </button>
+                                <span id="zoom-level-badge" class="badge" style="font-size: 0.75rem; padding: 0.35rem 0.65rem; min-width: 55px; text-align: center;">100%</span>
+                                <button class="btn btn-toolbar" id="zoom-in-btn" title="Zoom In" style="padding: 0.5rem; width: 34px; height: 34px; display: flex; align-items: center; justify-content: center;">
+                                    <i data-lucide="zoom-in" style="width: 16px; height: 16px;"></i>
+                                </button>
+                            </div>
+
+                            <!-- Text Styling Options (Hidden by default, shown when text element active) -->
+                            <div class="toolbar-group text-styling-controls" id="text-style-controls" style="display: none; gap: 0.5rem; align-items: center;">
+                                <span style="font-size: 0.8rem; color: var(--text-muted);">Font:</span>
+                                <select id="font-family-select" class="btn btn-toolbar" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; height: 34px;">
+                                    <option value="Helvetica" selected>Helvetica</option>
+                                    <option value="Times Roman">Times Roman</option>
+                                    <option value="Courier">Courier</option>
+                                </select>
+                                <select id="font-size-select" class="btn btn-toolbar" style="padding: 0.25rem 0.5rem; font-size: 0.8rem; width: 60px; height: 34px;">
+                                    <option value="12">12</option>
+                                    <option value="14">14</option>
+                                    <option value="16" selected>16</option>
+                                    <option value="18">18</option>
+                                    <option value="20">20</option>
+                                    <option value="24">24</option>
+                                    <option value="28">28</option>
+                                    <option value="32">32</option>
+                                    <option value="48">48</option>
+                                </select>
+                                <input type="color" id="text-color-picker" value="#000000" title="Text Color" style="width: 34px; height: 34px; border: 1px solid var(--border-color); border-radius: 4px; cursor: pointer; background: none; padding: 0;">
+                            </div>
+
+                            <div class="toolbar-group select-tool-info">
+                                <span class="helper-text-white"><i data-lucide="info" style="width: 14px; height: 14px; display: inline; vertical-align: middle;"></i> Click a button, then drag & place on the page. Double-click text to edit.</span>
+                            </div>
+                        </div>
+
+                        <div class="editor-layout">
+                            <!-- Left: Pages Navigation thumbnails -->
+                            <div class="editor-thumbnails" id="editor-page-thumbnails"></div>
+
+                            <!-- Center: Active Page Canvas -->
+                            <div class="editor-canvas-container" id="editor-active-canvas-container">
+                                <div class="canvas-wrapper" id="canvas-workspace-wrapper">
+                                    <!-- Dynamic PDF page canvas and overlay elements go here -->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-large" id="edit-action-btn">
+                                <i data-lucide="download-cloud"></i> Export & Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Rotate PDF Tab -->
+                <section id="tab-rotate" class="tab-panel">
+                    <!-- Drop Zone -->
+                    <div class="drop-zone" id="rotate-drop-zone">
+                        <input type="file" id="rotate-file-input" accept=".pdf" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon-wrapper">
+                                <i data-lucide="rotate-cw"></i>
+                            </div>
+                            <h3>Drag & drop a PDF to rotate</h3>
+                            <p>or <span class="highlight">browse your files</span></p>
+                            <span class="file-spec">Rotate pages clockwise</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Rotate Workspace -->
+                    <div class="workspace-card" id="rotate-workspace" style="display: none;">
+                        <div class="card-header">
+                            <span class="badge" id="rotate-file-name">file.pdf</span>
+                            <span class="badge" id="rotate-total-pages" style="margin-left: 0.5rem;">0 Pages</span>
+                            <div class="card-header-actions">
+                                <button class="btn btn-secondary" id="rotate-reset-btn">
+                                    <i data-lucide="arrow-left"></i> Choose Another File
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="pages-grid" id="rotate-pages-list" style="max-height: 50vh; overflow-y: auto; padding: 1rem;"></div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-large" id="rotate-action-btn">
+                                <i data-lucide="download"></i> Export & Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Delete Pages Tab -->
+                <section id="tab-delete" class="tab-panel">
+                    <!-- Drop Zone -->
+                    <div class="drop-zone" id="delete-drop-zone">
+                        <input type="file" id="delete-file-input" accept=".pdf" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon-wrapper">
+                                <i data-lucide="trash-2"></i>
+                            </div>
+                            <h3>Drag & drop a PDF to delete pages</h3>
+                            <p>or <span class="highlight">browse your files</span></p>
+                            <span class="file-spec">Select pages to remove</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Delete Workspace -->
+                    <div class="workspace-card" id="delete-workspace" style="display: none;">
+                        <div class="card-header">
+                            <span class="badge" id="delete-file-name">file.pdf</span>
+                            <span class="badge" id="delete-total-pages" style="margin-left: 0.5rem;">0 Pages</span>
+                            <div class="card-header-actions">
+                                <button class="btn btn-secondary" id="delete-reset-btn">
+                                    <i data-lucide="arrow-left"></i> Choose Another File
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="pages-grid" id="delete-pages-list" style="max-height: 50vh; overflow-y: auto; padding: 1rem;"></div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-large" id="delete-action-btn">
+                                <i data-lucide="download"></i> Export & Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Images to PDF Tab -->
+                <section id="tab-images-to-pdf" class="tab-panel">
+                    <!-- Drop Zone -->
+                    <div class="drop-zone" id="images-to-pdf-drop-zone">
+                        <input type="file" id="images-to-pdf-file-input" multiple accept="image/*" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon-wrapper">
+                                <i data-lucide="image"></i>
+                            </div>
+                            <h3>Drag & drop your images here</h3>
+                            <p>or <span class="highlight">browse your files</span></p>
+                            <span class="file-spec">Supports JPG, PNG, WebP, GIF, BMP</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Images Workspace -->
+                    <div class="workspace-card" id="images-to-pdf-workspace" style="display: none;">
+                        <div class="card-header">
+                            <div class="card-header-left">
+                                <span class="badge" id="images-to-pdf-file-count">0 Images Selected</span>
+                            </div>
+                            <div class="card-header-actions">
+                                <button class="btn btn-secondary" id="images-to-pdf-clear-btn">
+                                    <i data-lucide="trash-2"></i> Clear All
+                                </button>
+                                <button class="btn btn-secondary" id="images-to-pdf-add-more-btn">
+                                    <i data-lucide="plus"></i> Add Images
+                                    <input type="file" id="images-to-pdf-add-input" multiple accept="image/*" style="display:none;">
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="split-controls-layout">
+                            <!-- Left: Options Column -->
+                            <div class="split-sidebar-options">
+                                <h3>Page & Layout Settings</h3>
+                                
+                                <div class="option-group">
+                                    <label for="images-to-pdf-page-size">Page Size</label>
+                                    <select id="images-to-pdf-page-size" class="select-control">
+                                        <option value="a4" selected>A4 (210 × 297 mm)</option>
+                                        <option value="letter">US Letter (8.5 × 11 in)</option>
+                                        <option value="fit">Fit Image (Same as original)</option>
+                                    </select>
+                                </div>
+
+                                <div class="option-group">
+                                    <label for="images-to-pdf-orientation">Page Orientation</label>
+                                    <select id="images-to-pdf-orientation" class="select-control">
+                                        <option value="portrait" selected>Portrait</option>
+                                        <option value="landscape">Landscape</option>
+                                    </select>
+                                </div>
+
+                                <div class="option-group">
+                                    <label for="images-to-pdf-margin">Margins</label>
+                                    <select id="images-to-pdf-margin" class="select-control">
+                                        <option value="none" selected>No Margin (0px)</option>
+                                        <option value="small">Small Margin (20px)</option>
+                                        <option value="large">Large Margin (50px)</option>
+                                    </select>
+                                </div>
+
+                                <div class="option-group">
+                                    <label for="images-to-pdf-alignment">Image Alignment</label>
+                                    <select id="images-to-pdf-alignment" class="select-control">
+                                        <option value="center" selected>Center & Preserve Ratio</option>
+                                        <option value="stretch">Stretch to Fill Page</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <!-- Right: Thumbnails List (Draggable for Reordering) -->
+                            <div class="split-pages-preview-container">
+                                <div class="preview-actions">
+                                    <span style="font-size: 0.8rem; color: var(--text-muted); display: flex; align-items: center; gap: 0.25rem;">
+                                        <i data-lucide="move" style="width: 14px; height: 14px;"></i>
+                                        Drag and drop cards to change page sequence.
+                                    </span>
+                                </div>
+                                <div class="files-grid" id="images-to-pdf-files-list" style="max-height: 50vh; overflow-y: auto; padding: 1rem;"></div>
+                            </div>
+                        </div>
+
+                        <div class="card-footer">
+                            <button class="btn btn-primary btn-large" id="images-to-pdf-action-btn">
+                                <i data-lucide="file-check"></i> Convert & Download PDF
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Reorder Tab -->
+                <section id="tab-reorder" class="tab-panel">
+                    <div class="drop-zone" id="reorder-drop-zone"><input type="file" id="reorder-file-input"></div>
+                    <div class="workspace-card" id="reorder-workspace" style="display:none;"></div>
+                </section>
+
+                <!-- Compress Tab -->
+                <section id="tab-compress" class="tab-panel">
+                    <div class="drop-zone" id="compress-drop-zone"><input type="file" id="compress-file-input"></div>
+                    <div class="workspace-card" id="compress-workspace" style="display:none;"></div>
+                </section>
+                <!-- PDF to Images Tab -->
+                <section id="tab-pdf-to-images" class="tab-panel">
+                    <div class="drop-zone" id="pdf-to-images-drop-zone"><input type="file" id="pdf-to-images-file-input"></div>
+                    <div class="workspace-card" id="pdf-to-images-workspace" style="display:none;"></div>
+                </section>
+                <!-- Protect PDF Tab -->
+                <section id="tab-protect" class="tab-panel">
+                    <div class="drop-zone" id="protect-drop-zone"><input type="file" id="protect-file-input"></div>
+                    <div class="workspace-card" id="protect-workspace" style="display:none;"></div>
+                </section>
+                <!-- Unlock PDF Tab -->
+                <section id="tab-unlock" class="tab-panel">
+                    <div class="drop-zone" id="unlock-drop-zone"><input type="file" id="unlock-file-input"></div>
+                    <div class="workspace-card" id="unlock-workspace" style="display:none;"></div>
+                </section>
+    </div>
+
+    <!-- Signature Drawing Modal -->
+    <div class="modal-overlay" id="signature-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>Draw Your Signature</h3>
+                <button class="close-btn" id="close-sig-modal" aria-label="Close modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="signature-pad-container">
+                    <canvas id="signature-pad" width="500" height="200"></canvas>
+                </div>
+                <div class="signature-controls">
+                    <div class="color-options">
+                        <button class="color-btn active" data-color="#000000" style="background-color: #000000;"></button>
+                        <button class="color-btn" data-color="#0000ff" style="background-color: #0000ff;"></button>
+                        <button class="color-btn" data-color="#8b0000" style="background-color: #8b0000;"></button>
+                    </div>
+                    <button class="btn btn-secondary btn-sm" id="clear-sig-btn">Clear Pad</button>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" id="cancel-sig-btn">Cancel</button>
+                <button class="btn btn-primary" id="save-sig-btn">Place Signature</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Processing Overlay Loading Spinner -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner-content">
+            <div class="spinner"></div>
+            <h3 id="loading-text">Processing PDF...</h3>
+            <p>This stays entirely in your browser and may take a moment.</p>
+        </div>
+    </div>
+
+    <!-- Local scripts -->
+    <script src="pdf-tools.js?v=35"></script>
+    <script src="app.js?v=35"></script>
+</body>
+</html>

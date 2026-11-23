@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="../favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convert PDF to Images &amp; Images to PDF - PDFCraft</title>
+    <meta name="description" content="Convert PDF pages to PNG or JPG at 150 or 300 DPI, or turn photos and scans into a PDF. Covers real file sizes, quality trade-offs, and the flatten trick.">
+    <link rel="canonical" href="https://pdf-craft.online/how-to/convert-between-pdf-and-images">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+    
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pdf-craft.online/how-to/convert-between-pdf-and-images">
+    <meta property="og:title" content="Convert PDF to Images &amp; Images to PDF - PDFCraft">
+    <meta property="og:description" content="Convert PDF pages to PNG or JPG at 150 or 300 DPI, or turn photos and scans into a PDF. Covers real file sizes, quality trade-offs, and the flatten trick.">
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TechArticle Schema for Google Rich Snippets -->
+<link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="../opensearch.xml">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Convert Between PDF and Images, Both Directions",
+  "description": "Convert PDF pages to PNG or JPG at 150 or 300 DPI, or turn photos and scans into a PDF. Covers real file sizes, quality trade-offs, and the flatten trick.",
+  "image": "https://pdf-craft.online/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pdf-craft.online/favicon-192x192.png"
+    }
+  },
+  "mainEntityOfPage": "https://pdf-craft.online/how-to/convert-between-pdf-and-images",
+  "inLanguage": "en",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Will converting a PDF to images make the file bigger or smaller?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually bigger, sometimes much bigger. Text-based PDFs are compact because text is character codes, not pixels; a ten-page contract that's 200 KB as a PDF can become several megabytes as 300 DPI PNGs. The exception: a PDF already made of large embedded photos, where well-chosen JPGs can come out smaller."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I convert just one or two pages instead of the whole PDF?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pull them out first with Split PDF, then run just those pages through PDF to Images — faster than converting everything and discarding the rest."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my converted PDF look blurry when I print it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It was likely rendered at 150 DPI, built for screens — printed at full size it looks soft, especially on small text. Re-render at 300 DPI for print."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I combine a PDF and some images into one file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not in one step. Turn your images into their own PDF with Images to PDF, then use Merge PDF to combine that with the existing one."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a page count or file size limit?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "None enforced by the tool, since everything runs in your browser tab rather than on a server. The real ceiling is memory: a single 300 DPI Letter-sized canvas is 2550×3300 pixels, roughly 34 MB of raw pixel data held in the browser before it's ever encoded to PNG or JPG. A long document or a big batch of full-resolution photos adds up fast enough to crash the tab on an older phone or low-RAM laptop. Try a lower DPI or smaller batches if a job stalls."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Images to PDF add OCR so I can search the text later?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The output is your images as pictures on each page — no text recognition step, so it won't be searchable even though it looks like a normal document. You'd need separate OCR software for that."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="page-flow page-doc">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="/#tools">Tools</a>
+                <a href="/#guides">Guides</a>
+                <a href="/security">Security</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <header class="privacy-header">
+            <h1>How to Convert Between PDF and Images, Both Directions</h1>
+            <p class="file-spec">PNG or JPG, 150 or 300 DPI, and the round-trip that permanently flattens a PDF.</p>
+        </header>
+
+        <article class="privacy-content">
+<p>You've got one of two problems: a PDF that needs to become pictures &mdash; for a slide deck, a forum post, a chat message &mdash; or a pile of pictures (scans, screenshots, phone photos of a document) that need to become one PDF. <a href="/pdf-to-images">PDF to Images</a> and <a href="/images-to-pdf">Images to PDF</a> handle both, entirely in the browser, and each direction has a trade-off worth knowing first.</p>
+
+<h2><i data-lucide="image"></i> Turning a PDF into images</h2>
+<p>PDF to Images renders each page onto a canvas with pdf.js, then saves it as a PNG or JPG, one image per page. Two choices matter: format and resolution.</p>
+
+<h3>PNG or JPG?</h3>
+<p>Use PNG for anything mostly text or line art &mdash; a contract, an invoice, a scanned form &mdash; since it's lossless and keeps letters crisp. Use JPG for anything photographic &mdash; a scanned photo, a glossy brochure, a gradient-heavy layout. JPG is the tool's default, fixed at 92% quality with no slider to lower it, so you'll never get a genuinely low-quality JPG here. Even at 92%, JPG still softens hard edges a little, which is exactly wrong for text: a type-heavy page shows faint smudging around letters that the same page as PNG doesn't. Get it backwards and pay for it in size &mdash; a PNG photo can run several times larger than the same JPG, for no visible gain.</p>
+
+<h3>150 DPI vs. 300 DPI, in real numbers</h3>
+<p>DPI is pixels rendered per inch of the original page. A US Letter page comes out at 1275&times;1650 pixels at 150 DPI, or 2550&times;3300 at 300 DPI &mdash; four times the pixels, since both dimensions double. 150 DPI is screen resolution: readable on a monitor or phone, small files. 300 DPI is print resolution, for anything printed at full size.</p>
+<p>Size follows pixel count. A plain text page as PNG at 150 DPI typically lands around 100&ndash;300 KB; at 300 DPI, expect three to four times that. A full-color photo page is the opposite story: as PNG it can run into several megabytes, while the same page as JPG often comes in at a few hundred KB even at 300 DPI. Convert a 40-page scanned contract at 300 DPI as PNG and a zip in the tens of megabytes is normal.</p>
+
+<h3>One image per page, always zipped</h3>
+<p>You always get a .zip, one file per page, even for a single-page PDF, built client-side with JSZip &mdash; nothing uploaded. Unzip and the images are in page order, ready to use.</p>
+
+<h2><i data-lucide="alert-triangle"></i> Why the text stops being text</h2>
+<p>A PDF stores text as character codes and font references, which is why you can select, search, and copy it, and why a screen reader can read it aloud. Rendering to an image throws that away: pdf.js paints the page the way a screen would display it, and what comes out is a grid of colored pixels with no memory of where the letter "A" was &mdash; a screenshot, literally. The only way back is OCR, which PDFCraft doesn't offer. Keep the source PDF if you need the real text later.</p>
+
+<h2><i data-lucide="layers"></i> Turning images into a PDF</h2>
+<p>Images to PDF runs the opposite direction: each image becomes one page, no OCR step &mdash; pictures inside a PDF, not a searchable document.</p>
+
+<h3>Four controls decide what the page looks like</h3>
+<p>Images to PDF has four settings: <strong>Page Size</strong> (A4 by default, or US Letter, or "Fit Image," which sizes the page to the photo instead), <strong>Orientation</strong> (Portrait by default, or Landscape &mdash; relevant only for A4/Letter, since Fit Image just follows the photo's shape), <strong>Margins</strong> (none by default, 20px, or 50px), and <strong>Alignment</strong> (Center &amp; Preserve Ratio by default, or Stretch to Fill Page).</p>
+<p>Leave everything on default and every page comes out the same A4 size regardless of the source photo &mdash; tall and wide images land on identical portrait pages, centered with ratio intact, meaning letterboxing wherever the image doesn't match the page's proportions. Fit Image removes the letterboxing but lets page size follow the photo, so a mixed batch produces mixed page sizes. Stretch to Fill Page resizes the photo to fill the page exactly instead &mdash; no blank space, but a mismatched photo comes out distorted. Pick two of "uniform pages," "no letterboxing," "undistorted image" &mdash; not all three.</p>
+
+<h3>JPEG and PNG go in directly; everything else takes a detour</h3>
+<p>pdf-lib embeds JPEG and PNG bytes straight into the PDF, essentially as-is. Other formats (WEBP, BMP, TIFF, HEIC) can't be embedded that way, so the tool draws the image to a canvas and re-encodes it as JPEG at 90% quality &mdash; an extra lossy pass that only works if the browser can decode the format at all. HEIC, the default on iPhones, is the most common snag; a file that fails to decode is silently skipped rather than added to your batch. If your phone photos aren't behaving, export as JPEG instead (iPhone: Settings &gt; Camera &gt; Formats &gt; Most Compatible).</p>
+<p>One more thing: since Images to PDF always builds a brand-new document, round-tripping an existing PDF for the flatten trick below drops its original Title/Author metadata &mdash; pdf-lib writes its own generic Producer/Creator instead. The download always comes out named converted_images.pdf regardless of source, so rename it yourself if that matters.</p>
+
+<h3>Getting the order right</h3>
+<p>Drag the thumbnail cards in the workspace into the order you want pages to appear &mdash; supported directly, no workaround needed. It won't fix your file picker's load order, though, which can default to alphabetical rather than click order; rename files with numeric prefixes first (01-cover.jpg, 02-page-two.jpg) if that matters.</p>
+
+<h2><i data-lucide="file-text"></i> Combining phone photos into one usable PDF</h2>
+<p>The input photo matters more than any tool setting. Three things move the needle:</p>
+<ul>
+<li><strong>Lighting.</strong> Even, indirect light &mdash; direct sun or a lamp creates hot spots and shadows that get baked in permanently. Shoot near a window on an overcast day instead.</li>
+<li><strong>Angle and cropping.</strong> Shoot straight-on and fill the frame. The tool doesn't crop, straighten, or deskew, so whatever tilt is in the shot stays in the PDF page.</li>
+<li><strong>Contrast.</strong> Photographed pages look duller than the paper itself. Use your phone's document-scanner mode if it has one (iOS Notes, several Android gallery apps) &mdash; it auto-crops and boosts contrast for a far more legible result than a raw photo.</li>
+</ul>
+<p>Clean up on the phone first &mdash; the tool won't fix a bad photo.</p>
+
+<h2><i data-lucide="eye-off"></i> The trick: round-tripping a PDF to flatten it for good</h2>
+<p>Run a PDF through <a href="/pdf-to-images">PDF to Images</a> and straight back through <a href="/images-to-pdf">Images to PDF</a> and you've flattened it: every page becomes a picture of itself, then a PDF page again. Nothing on it can be extracted as data anymore &mdash; it's no longer text or vector objects, just pixels.</p>
+<p>That's exactly what you want after using the <a href="/how-to/redact-and-remove-pdf-content">Black Box to cover something up</a> &mdash; a box on top of the page doesn't remove what's underneath, but flattening does, since after the round trip there's no text left anywhere, covered or not. Use 300 DPI for this if the page will ever be read again &mdash; 150 DPI can make small print hard to read once it's baked into a picture.</p>
+<p>This isn't the same as <a href="/compress-pdf">Compress PDF</a>, which also rasterizes as a side effect but targets file size, not deliberate flattening. Use the manual round trip when flattening itself is the goal. For a smaller file that still needs to stay searchable, see <a href="/how-to/compress-pdf-without-losing-text">compressing a PDF without losing its text layer</a> instead.</p>
+<blockquote><strong>Heads up:</strong> this round trip is a one-way door. Once a PDF is flattened and rebuilt, the original text, links, form fields, bookmarks, and accessibility structure are gone &mdash; not hidden, not recoverable without OCR, gone. Keep a copy of the original, and only flatten when permanently removing something really is the goal.</blockquote>
+
+<h2><i data-lucide="check-circle"></i> Which direction do you actually need?</h2>
+<table>
+<thead>
+<tr><th>Direction</th><th>What's preserved</th><th>What's lost</th><th>Typical use case</th></tr>
+</thead>
+<tbody>
+<tr><td>PDF &rarr; Images</td><td>Exact visual appearance, layout, colors and graphics</td><td>Selectable/searchable text, links, form fields, bookmarks, accessibility tags</td><td>Sharing a page as a picture, posting where PDFs aren't accepted</td></tr>
+<tr><td>Images &rarr; PDF</td><td>Original image quality (JPEG/PNG as-is; other formats re-encoded once, as JPEG)</td><td>Nothing pre-existing &mdash; but no text layer is ever created</td><td>Combining scans, receipts, or phone photos into one file</td></tr>
+<tr><td>Round trip (PDF &rarr; Images &rarr; PDF)</td><td>Visual appearance only</td><td>All text, links, form fields, bookmarks, accessibility structure &mdash; permanently</td><td>Flattening a page after redacting it, or stripping hidden metadata</td></tr>
+</tbody>
+</table>
+
+<h2><i data-lucide="help-circle"></i> Frequently Asked Questions</h2>
+
+<h3>Will converting a PDF to images make the file bigger or smaller?</h3>
+<p>Usually bigger, sometimes much bigger. Text-based PDFs are compact because text is character codes, not pixels; a ten-page contract that's 200 KB as a PDF can become several megabytes as 300 DPI PNGs. The exception: a PDF already made of large embedded photos, where well-chosen JPGs can come out smaller.</p>
+
+<h3>Can I convert just one or two pages instead of the whole PDF?</h3>
+<p>Pull them out first with <a href="/split-pdf">Split PDF</a>, then run just those pages through PDF to Images &mdash; faster than converting everything and discarding the rest.</p>
+
+<h3>Why does my converted PDF look blurry when I print it?</h3>
+<p>It was likely rendered at 150 DPI, built for screens &mdash; printed at full size it looks soft, especially on small text. Re-render at 300 DPI for print.</p>
+
+<h3>Can I combine a PDF and some images into one file?</h3>
+<p>Not in one step. Turn your images into their own PDF with Images to PDF, then use <a href="/merge-pdf">Merge PDF</a> to combine that with the existing one.</p>
+
+<h3>Is there a page count or file size limit?</h3>
+<p>None enforced by the tool, since everything runs in your browser tab rather than on a server. The real ceiling is memory: a single 300 DPI Letter-sized canvas is 2550&times;3300 pixels, roughly 34 MB of raw pixel data held in the browser before it's ever encoded to PNG or JPG. A long document or a big batch of full-resolution photos adds up fast enough to crash the tab on an older phone or low-RAM laptop. Try a lower DPI or smaller batches if a job stalls.</p>
+
+<h3>Does Images to PDF add OCR so I can search the text later?</h3>
+<p>No. The output is your images as pictures on each page &mdash; no text recognition step, so it won't be searchable even though it looks like a normal document. You'd need separate OCR software for that.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="/how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="/how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="/how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="/how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="/how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="/how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="/">All 14 tools</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Protect PDF - Password Protect PDF Online - PDFCraft</title>
+    
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Free Protect PDF - Password Protect PDF Online - PDFCraft">
+    <meta name="description" content="Encrypt and password protect PDF files for free, securely in your browser. Add password protection to your PDF documents locally. Files stay on your device.">
+    <meta name="keywords" content="free online pdf editor, protect pdf online, password protect pdf, encrypt pdf, offline protect tool, pdf-craft, pdfcraft">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <link rel="canonical" href="https://pdf-craft.online/protect-pdf">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://pdf-craft.online/protect-pdf">
+    <meta property="og:title" content="Free Protect PDF - Password Protect PDF Online - PDFCraft">
+    <meta property="og:description" content="Encrypt and password protect PDF files for free, securely in your browser. Add password protection to your PDF documents locally. Files stay on your device.">
+    <meta property="og:site_name" content="PDFCraft">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://pdf-craft.online/protect-pdf">
+    <meta property="twitter:title" content="Free Protect PDF - Password Protect PDF Online - PDFCraft">
+    <meta property="twitter:description" content="Encrypt and password protect PDF files for free, securely in your browser. Add password protection to your PDF documents locally. Files stay on your device.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    <!-- PDF.js CDN -->
+    <script src="/lib/pdf-3.4.120.min.js"></script>
+    <!-- pdf-lib CDN -->
+    <script src="/lib/pdf-lib-1.17.1.min.js"></script>
+    
+    <!-- Import Map for dynamic imports of pdf-lib -->
+    <script type="importmap">
+    {
+      "imports": {
+        "pdf-lib": "/lib/pdf-lib-1.17.1.esm.js"
+      }
+    }
+    </script>
+
+    <!-- Icons & Theme -->
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <meta name="theme-color" content="#ECEEF0" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#1E2125" media="(prefers-color-scheme: dark)">
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+
+    
+
+        <!-- Schema.org JSON-LD structured data -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PDFCraft - Protect PDF with Password",
+    "url": "https://pdf-craft.online/protect-pdf",
+    "description": "Add a password to your PDF with RC4 128-bit encryption, inside your browser. Your files never touch our servers.",
+    "applicationCategory": "Utility",
+    "operatingSystem": "All",
+    "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+    },
+    "featureList": [
+        "Password protection applied locally",
+        "RC4 128-bit encryption client-side",
+        "In-browser secure document processing"
+    ]
+}
+    </script>
+    <!-- FAQ Schema for search rich snippets -->
+    <script type="application/ld+json">
+{
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "How secure is PDFCraft's password protection?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We use standard PDF encryption to lock your documents. Since the encryption process runs entirely in your browser sandbox, your password and document are completely safe from interceptors."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Will my PDF password be saved by PDFCraft?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. PDFCraft operates entirely client-side. We do not store, track, or log your passwords or files. Once you close the tab, all session details are permanently gone."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Will the password-protected PDF work in standard viewers?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. The output is a standard encrypted PDF. It will prompt for the password when opened in Adobe Acrobat, Google Chrome, Apple Preview, or any other PDF reader."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I password protect PDFs offline?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. After installing PDFCraft as a PWA, you can encrypt your sensitive documents offline, keeping them safe on your local drive."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can the password be removed by someone who does not know it?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Not easily, if the password is long. The realistic attack is guessing, performed offline against a copy of your file. That is why the length of your password matters more than any other single choice here."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the difference between a user password and an owner password?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The user password is required to open the document and is what actually drives the encryption. The owner password governs permission flags such as printing and copying, and those flags depend on the reader choosing to honour them."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does protecting a PDF stop someone taking a screenshot?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. Once a document is open on screen it can be photographed, screenshotted or retyped. Encryption controls who can open the file, not what they do afterwards."
+            }
+        }
+    ]
+}
+    </script>
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="opensearch.xml">
+</head>
+<body>
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo-area">
+                <a href="/" style="display: flex; align-items: center; gap: 0.75rem; text-decoration: none; color: inherit;">
+                    <div class="logo-icon"><svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg></div>
+                    <div>
+                        <div class="brand-title">PDFCraft</div>
+                        <span class="brand-badge">Free, no account</span>
+                    </div>
+                </a>
+            </div>
+            
+            <nav class="nav-menu">
+                <a href="merge-pdf" class="nav-btn" data-tab="merge">
+                    <i data-lucide="merge"></i>
+                    <span>Merge PDF</span>
+                </a>
+                <a href="split-pdf" class="nav-btn" data-tab="split">
+                    <i data-lucide="scissors"></i>
+                    <span>Split PDF</span>
+                </a>
+                <a href="sign-pdf" class="nav-btn" data-tab="edit">
+                    <i data-lucide="pen-tool"></i>
+                    <span>Sign & Edit</span>
+                </a>
+                <a href="rotate-pdf" class="nav-btn" data-tab="rotate">
+                    <i data-lucide="rotate-cw"></i>
+                    <span>Rotate PDF</span>
+                </a>
+                <a href="delete-pages" class="nav-btn" data-tab="delete">
+                    <i data-lucide="trash-2"></i>
+                    <span>Delete Pages</span>
+                </a>
+                <a href="reorder-pdf" class="nav-btn" data-tab="reorder">
+                    <i data-lucide="move"></i>
+                    <span>Reorder PDF</span>
+                </a>
+                <a href="images-to-pdf" class="nav-btn" data-tab="images-to-pdf">
+                    <i data-lucide="image"></i>
+                    <span>Images to PDF</span>
+                </a>
+                <a href="compress-pdf" class="nav-btn" data-tab="compress">
+                    <i data-lucide="minimize-2"></i>
+                    <span>Compress PDF</span>
+                </a>
+                <a href="pdf-to-images" class="nav-btn" data-tab="pdf-to-images">
+                    <i data-lucide="file-image"></i>
+                    <span>PDF to Images</span>
+                </a>
+                <a href="protect-pdf" class="nav-btn active" data-tab="protect">
+                    <i data-lucide="lock"></i>
+                    <span>Protect PDF</span>
+                </a>
+                <a href="unlock-pdf" class="nav-btn" data-tab="unlock">
+                    <i data-lucide="unlock"></i>
+                    <span>Unlock PDF</span>
+                </a>
+                <a href="number-pdf" class="nav-btn" data-tab="number">
+                    <i data-lucide="binary"></i>
+                    <span>Number PDF</span>
+                </a>
+                <a href="watermark-pdf" class="nav-btn" data-tab="watermark">
+                    <i data-lucide="stamp"></i>
+                    <span>Watermark PDF</span>
+                </a>
+                <a href="edit-pdf-text" class="nav-btn" data-tab="edit-text">
+                    <i data-lucide="type"></i>
+                    <span>Edit PDF Text</span>
+                </a>
+                <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener" class="nav-btn nav-btn-sponsor">
+                    <i data-lucide="heart"></i>
+                    <span>Support & Donate</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="privacy-box">
+                    <i data-lucide="shield-check"></i>
+                    <p><strong>Privacy Secure:</strong> Files never leave your device. All calculations run in your browser.</p>
+                </div>
+                
+
+                
+
+                <div class="footer-links-group" style="margin-top: 0.75rem; border-top: 1px solid var(--border-color); padding-top: 0.75rem; text-align: center; font-size: 0.65rem; display: flex; flex-direction: column; gap: 0.25rem; align-items: center;">
+                                                            <span style="color: var(--text-muted); font-weight: 500;">Step-by-Step Offline Guides:</span>
+                    <div style="display: flex; gap: 0.4rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="how-to/safe-online-pdf-tools-confidential-documents" class="footer-link">Is It Safe?</a> |
+                        <a href="how-to/merge-and-split-pdf-without-uploading" class="footer-link">Merge &amp; Split</a> |
+                        <a href="how-to/organize-pdf-pages" class="footer-link">Organize Pages</a> |
+                        <a href="how-to/convert-between-pdf-and-images" class="footer-link">PDF &amp; Images</a> |
+                        <a href="how-to/compress-pdf-without-losing-text" class="footer-link">Compress</a> |
+                        <a href="how-to/protect-pdf-with-password" class="footer-link">Protect</a> |
+                        <a href="how-to/redact-and-remove-pdf-content" class="footer-link">Remove Content</a> |
+                        <a href="how-to/edit-existing-pdf-text" class="footer-link">Edit Text</a> |
+                        <a href="how-to/add-watermark-to-pdf" class="footer-link">Watermark</a>
+                    </div>
+                </div>
+                
+                <div style="text-align: center; margin-top: 0.5rem; display: flex; gap: 0.5rem; justify-content: center; font-size: 0.65rem;">
+                    <a href="privacy" class="footer-link">Privacy</a>
+                    <span style="color: var(--border-color);">|</span>
+                    <a href="security" class="footer-link">Security</a>
+                    <span style="color: var(--border-color);">|</span>
+                    <a href="about" class="footer-link">About</a>
+                    <span style="color: var(--border-color);">|</span>
+                    <a href="contact" class="footer-link">Contact</a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content Workspace -->
+        <main class="workspace">
+            <header class="workspace-header">
+                <div class="tool-title-area">
+                    <h1 id="current-tool-title">Password Protect PDF</h1>
+                    <p id="current-tool-desc">Secure your PDF document offline in your browser with RC4 128-bit password encryption.</p>
+                </div>
+                <div class="header-actions">
+                    <button id="theme-toggle" class="btn-icon" title="Toggle Theme" aria-label="Toggle Theme">
+                        <i data-lucide="sun"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="tool-content">
+                <!-- Protect Tab (Active) -->
+                <section id="tab-protect" class="tab-panel active">
+                    <!-- Drop Zone -->
+                    <div class="drop-zone" id="protect-drop-zone">
+                        <input type="file" id="protect-file-input" accept=".pdf" class="file-input">
+                        <div class="drop-zone-content">
+                            <div class="upload-icon-wrapper">
+                                <i data-lucide="lock"></i>
+                            </div>
+                            <h3>Drag & drop a PDF to protect</h3>
+                            <p>or <span class="highlight">browse your files</span></p>
+                            <span class="file-spec">Single PDF file — limited only by your device memory</span>
+                        </div>
+                    </div>
+                    
+
+                    <!-- Protect Workspace -->
+                    <div class="workspace-card" id="protect-workspace" style="display: none;">
+                        <div class="card-header">
+                            <span class="badge" id="protect-file-name">file.pdf</span>
+                            <div class="card-header-actions">
+                                <button class="btn btn-secondary" id="protect-reset-btn">
+                                    <i data-lucide="arrow-left"></i> Choose Another File
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="compress-controls-layout" id="protect-controls-layout">
+                            <div class="compress-sidebar-options">
+                                <h3>Security Settings</h3>
+                                <div class="option-group">
+                                    <label for="protect-password">Choose Password</label>
+                                    <input type="password" id="protect-password" class="select-control" placeholder="Enter password to encrypt" style="padding: 0.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); width: 100%;">
+                                </div>
+                                <div class="option-group" style="margin-top: 1rem;">
+                                    <label for="protect-password-confirm">Confirm Password</label>
+                                    <input type="password" id="protect-password-confirm" class="select-control" placeholder="Confirm password" style="padding: 0.75rem; border: 1px solid var(--border-color); border-radius: var(--radius-sm); background: var(--bg-card); color: var(--text-main); width: 100%;">
+                                </div>
+                                <button class="btn btn-primary" id="protect-action-btn" style="width: 100%; margin-top: 1.5rem;">
+                                    <i data-lucide="lock"></i> Encrypt & Protect PDF
+                                </button>
+                            </div>
+                            
+                            <div class="pdf-preview-column" style="display: flex; flex-direction: column; align-items: center; justify-content: center; border: 2px dashed var(--border-color); border-radius: var(--radius-md); padding: 2rem; background: var(--bg-primary); min-height: 250px;">
+                                <i data-lucide="file-text" style="width: 64px; height: 64px; color: var(--accent-primary); margin-bottom: 1rem;"></i>
+                                <h4 id="protect-preview-filename" style="margin: 0; text-align: center; word-break: break-all;">Ready to Encrypt</h4>
+                                <p id="protect-preview-filesize" style="color: var(--text-muted); font-size: 0.85rem; margin-top: 0.25rem;"></p>
+                            </div>
+                        </div>
+
+                        <!-- Results Card (hidden by default) -->
+                        <div class="results-card" id="protect-results-card" style="display: none; margin-top: 1.5rem; padding: 1.5rem; background: var(--success-tint); border: 1px solid var(--success-tint); border-radius: var(--radius-md); text-align: center;">
+                            <i data-lucide="shield-check" style="width: 48px; height: 48px; color: var(--success); margin-bottom: 0.75rem;"></i>
+                            <h3>PDF Protected Successfully!</h3>
+                            <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: 0.25rem; margin-bottom: 1.25rem;">Your PDF is now encrypted with RC4 128-bit encryption — the widely compatible legacy scheme. See the security page for what it does and does not resist.</p>
+                            <button class="btn btn-primary" id="protect-download-btn" style="margin: 0 auto;">
+                                <i data-lucide="download"></i> Download Encrypted PDF
+                            </button>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Hidden tabs for compatibility with SPA app.js -->
+                <section id="tab-merge" class="tab-panel">
+                    <div class="drop-zone" id="merge-drop-zone"><input type="file" id="merge-file-input"></div>
+                    <div class="workspace-card" id="merge-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-split" class="tab-panel">
+                    <div class="drop-zone" id="split-drop-zone"><input type="file" id="split-file-input"></div>
+                    <div class="workspace-card" id="split-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-edit" class="tab-panel">
+                    <div class="drop-zone" id="edit-drop-zone"><input type="file" id="edit-file-input"></div>
+                    <div class="workspace-card" id="edit-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-rotate" class="tab-panel">
+                    <div class="drop-zone" id="rotate-drop-zone"><input type="file" id="rotate-file-input"></div>
+                    <div class="workspace-card" id="rotate-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-delete" class="tab-panel">
+                    <div class="drop-zone" id="delete-drop-zone"><input type="file" id="delete-file-input"></div>
+                    <div class="workspace-card" id="delete-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-reorder" class="tab-panel">
+                    <div class="drop-zone" id="reorder-drop-zone"><input type="file" id="reorder-file-input"></div>
+                    <div class="workspace-card" id="reorder-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-images-to-pdf" class="tab-panel">
+                    <div class="drop-zone" id="images-to-pdf-drop-zone"><input type="file" id="images-to-pdf-file-input"></div>
+                    <div class="workspace-card" id="images-to-pdf-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-compress" class="tab-panel">
+                    <div class="drop-zone" id="compress-drop-zone"><input type="file" id="compress-file-input"></div>
+                    <div class="workspace-card" id="compress-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-pdf-to-images" class="tab-panel">
+                    <div class="drop-zone" id="pdf-to-images-drop-zone"><input type="file" id="pdf-to-images-file-input"></div>
+                    <div class="workspace-card" id="pdf-to-images-workspace" style="display:none;"></div>
+                </section>
+                <section id="tab-unlock" class="tab-panel">
+                    <div class="drop-zone" id="unlock-drop-zone"><input type="file" id="unlock-file-input"></div>
+                    <div class="workspace-card" id="unlock-workspace" style="display:none;"></div>
+                </section>
+            </div>
+            
+
+            <!-- SEO Content & FAQ Section -->
+            <section class="seo-faq-section">
+                <h2><i data-lucide="lock"></i> Secure Local PDF Password Protection</h2>
+                <div class="seo-info-grid">
+                    <div class="seo-card">
+                        <h3><i data-lucide="shield-check"></i> Private Local Encryption</h3>
+                        <p>Encrypt files directly on your CPU. No files or passwords are ever transmitted to any external server, eliminating data leak vulnerabilities.</p>
+                    </div>
+                    <div class="seo-card">
+                        <h3><i data-lucide="key-round"></i> Password-Gated Opening</h3>
+                        <p>Applies the PDF standard security handler, so the password is required to open the file. Note that PDF permission flags for printing, copying and editing are advisory only, and this tool does not set them.</p>
+                    </div>
+                    <div class="seo-card">
+                        <h3><i data-lucide="zap"></i> Instant Results</h3>
+                        <p>Protect your documents immediately. The locked PDF is generated inside your browser and downloaded instantly without upload delays.</p>
+                    </div>
+                </div>
+
+                <h3 class="faq-title">Frequently Asked Questions</h3>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary>How secure is PDFCraft's password protection?</summary>
+                        <div class="faq-content">
+                            We use standard PDF encryption to lock your documents. Since the encryption process runs entirely in your browser sandbox, your password and document are completely safe from interceptors.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Will my PDF password be saved by PDFCraft?</summary>
+                        <div class="faq-content">
+                            No. PDFCraft operates entirely client-side. We do not store, track, or log your passwords or files. Once you close the tab, all session details are permanently gone.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Will the password-protected PDF work in standard viewers?</summary>
+                        <div class="faq-content">
+                            Yes. The output is a standard encrypted PDF. It will prompt for the password when opened in Adobe Acrobat, Google Chrome, Apple Preview, or any other PDF reader.
+                        </div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Can I password protect PDFs offline?</summary>
+                        <div class="faq-content">
+                            Yes. After installing PDFCraft as a PWA, you can encrypt your sensitive documents offline, keeping them safe on your local drive.
+                        </div>
+                    </details>
+                </div>
+            
+                <!-- Contextual Guide Callout -->
+                <div class="seo-guide-callout" style="margin-top: 2rem; padding: 1.25rem; background: var(--accent-glow); border: 1px solid var(--border-color); border-radius: var(--radius-md); display: flex; align-items: center; gap: 1rem; justify-content: space-between;">
+                    <div style="display: flex; align-items: center; gap: 0.75rem;">
+                        <i data-lucide="book-open" style="color: var(--accent-primary); width: 24px; height: 24px;"></i>
+                        <div>
+                            <h4 style="font-weight: 600; margin: 0; font-size: 0.95rem; color: var(--text-main);">Step-by-Step Guide Available</h4>
+                            <p style="margin: 0.25rem 0 0 0; font-size: 0.85rem; color: var(--text-muted);">Choosing a password that holds up, and what PDF encryption cannot do.</p>
+                        </div>
+                    </div>
+                    <a href="how-to/protect-pdf-with-password" class="btn btn-sm" style="text-decoration: none; white-space: nowrap;">Read Guide</a>
+                </div>
+
+                <!-- Depth section: mechanism, limits, and tool-specific questions -->
+                <h3 class="faq-title">What password protection actually does to the file</h3>
+                <div class="seo-prose">
+                    <p>Applying a password encrypts the document. An encryption key is derived from the password you type and used to encrypt the content streams and strings inside the file, following the PDF specification's standard security handler. Without the password, a reader has structure it cannot decode rather than content it politely refuses to show.</p>
+                    <p>Two things are worth understanding before you rely on it. First, <strong>the encryption is only as strong as the password.</strong> An attacker who has your file can attempt passwords offline, as fast as their hardware allows, with nobody to rate-limit them. A short or common password offers very little protection regardless of the cipher. Second, PDF also supports permission flags — no printing, no copying — enforced by the reader rather than by cryptography. Plenty of software ignores them entirely, so treat them as a request, not a control.</p>
+                </div>
+                <h3 class="faq-title">Choosing a password you can actually depend on</h3>
+                <div class="seo-prose">
+                    <ul>
+                        <li><strong>Length beats complexity.</strong> A passphrase of four or five unrelated words resists offline guessing far better than a short string of substituted symbols.</li>
+                        <li><strong>There is no recovery.</strong> Nothing here stores your password, and there is no reset. Lose it and the document is genuinely unreadable.</li>
+                        <li><strong>Already-encrypted files are refused.</strong> Rather than risk producing a damaged double-encrypted file, the tool stops and asks you to remove the existing password first.</li>
+                        <li><strong>Send the password separately.</strong> A protected file and its password in the same email have the security of an unprotected file.</li>
+                    </ul>
+                </div>
+                <h3 class="faq-title">Encryption, permissions and their limits</h3>
+                <div class="faq-accordion">
+                    <details class="faq-item">
+                        <summary>Can the password be removed by someone who does not know it?</summary>
+                        <div class="faq-content">Not easily, if the password is long. The realistic attack is guessing, performed offline against a copy of your file. That is why the length of your password matters more than any other single choice here.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>What is the difference between a user password and an owner password?</summary>
+                        <div class="faq-content">The user password is required to open the document and is what actually drives the encryption. The owner password governs permission flags such as printing and copying, and those flags depend on the reader choosing to honour them.</div>
+                    </details>
+                    <details class="faq-item">
+                        <summary>Does protecting a PDF stop someone taking a screenshot?</summary>
+                        <div class="faq-content">No. Once a document is open on screen it can be photographed, screenshotted or retyped. Encryption controls who can open the file, not what they do afterwards.</div>
+                    </details>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Processing Overlay Loading Spinner -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner-content">
+            <div class="spinner"></div>
+            <h3 id="loading-text">Processing PDF...</h3>
+            <p>This stays entirely in your browser and may take a moment.</p>
+        </div>
+    </div>
+
+    <!-- Local scripts -->
+    <script src="pdf-tools.js?v=35"></script>
+    <script src="app.js?v=35"></script>
+</body>
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="../favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merge &amp; Split PDFs Without Uploading - PDFCraft</title>
+    <meta name="description" content="How merging and splitting PDFs actually works client-side: page order control, what bookmarks/forms survive, mixed page sizes, and browser memory limits.">
+    <link rel="canonical" href="https://pdf-craft.online/how-to/merge-and-split-pdf-without-uploading">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+    
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pdf-craft.online/how-to/merge-and-split-pdf-without-uploading">
+    <meta property="og:title" content="Merge &amp; Split PDFs Without Uploading - PDFCraft">
+    <meta property="og:description" content="How merging and splitting PDFs actually works client-side: page order control, what bookmarks/forms survive, mixed page sizes, and browser memory limits.">
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TechArticle Schema for Google Rich Snippets -->
+<link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="../opensearch.xml">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Merge and Split PDF Files Without Uploading Them",
+  "description": "How merging and splitting PDFs actually works client-side: page order control, what bookmarks/forms survive, mixed page sizes, and browser memory limits.",
+  "image": "https://pdf-craft.online/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pdf-craft.online/favicon-192x192.png"
+    }
+  },
+  "mainEntityOfPage": "https://pdf-craft.online/how-to/merge-and-split-pdf-without-uploading",
+  "inLanguage": "en",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Can I merge PDFs that are password-protected?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly. An encrypted file can't be opened by pdf-lib until the password is removed, so merging or splitting it will fail. Remove the password with Unlock PDF first, then merge the unlocked file normally."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I merge a Word document or an image together with my PDFs?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly — Merge PDF only combines files that are already PDFs. Export or print the Word document to PDF first, and turn images into a PDF page with Images to PDF, then merge everything together."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does splitting or extracting pages change my original file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Both tools read the original and generate a new, separate PDF to download; the source file on your device is never modified. You can extract the same pages, or a different selection, from the same original as many times as you like."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will the merged file still have selectable, searchable text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, as long as the source pages already had real text rather than being flat scanned images. Merging only copies existing content — it doesn't add or remove a text layer, so a scanned page with no text before the merge still won't have one after."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I merge or split PDFs on my phone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — it's the same web page in a mobile browser. The memory limits above bite sooner on a phone, though, since phones typically have less available RAM than a laptop; a merge that's effortless on a desktop can stall a mobile tab. For a large batch, a laptop is more forgiving."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="page-flow page-doc">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="/#tools">Tools</a>
+                <a href="/#guides">Guides</a>
+                <a href="/security">Security</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <header class="privacy-header">
+            <h1>How to Merge and Split PDF Files Without Uploading Them</h1>
+            <p class="file-spec">What actually survives a merge, why mixed page sizes look inconsistent, and the real limits of doing this in a browser tab.</p>
+        </header>
+
+        <article class="privacy-content">
+<p>Say you've got three scanned contracts, a cover sheet exported from Word, and a signed addendum, and all five need to land in one client's inbox as a single file before lunch. Or it's the opposite job: a 60-page vendor report just landed and you only need pages 12 through 18 for a meeting starting in nine minutes. Both tasks run through the same two tools &mdash; <a href="/merge-pdf">Merge PDF</a> and <a href="/split-pdf">Split PDF</a> &mdash; entirely inside the browser tab you already have open, with nothing sent anywhere. Here's what actually happens to the file, what breaks, and the mistakes that cause most of the confusion.</p>
+
+<h2><i data-lucide="layers"></i> Merging in the Order You Actually Want</h2>
+<p>Merge PDF assembles files in whatever order they sit in the file list on screen when you click merge &mdash; not the order you picked them in a folder dialog, and not alphabetical order. Drag files into the sequence you need before pressing merge; there's no separate reordering step once the combined file exists. If you've already generated a merged file and the order came out wrong, you don't have to start over: run the result through <a href="/reorder-pdf">Reorder PDF</a>, which moves one page card per drag &mdash; no multi-select, so relocating a six-page section takes six drags, not one. That's also the right tool if only a few pages inside one source file are out of place, rather than whole documents.</p>
+
+<h2><i data-lucide="file-text"></i> What Survives the Merge, and What Doesn't</h2>
+<p>Merge PDF uses pdf-lib to copy each page &mdash; content stream, embedded fonts, images &mdash; straight into a new document, so text stays selectable and images keep full quality. What a page-copy doesn't rebuild is anything that lives outside the page itself. A bookmark list (the outline) sits at the document level, not on any one page, so it doesn't carry across &mdash; the merged file opens with no bookmark panel even if every source had one. Fillable form fields hit a similar wall: the visible widget usually copies, but the AcroForm structure that makes it interactive also lives at the document level, so merged fields often render but can't be typed into. Page-level annotations (a highlight, a sticky note, a link to somewhere on the same page) usually come through fine, since they live inside that page's own annotation array. What breaks quietly is an internal link that jumps to a different page in the original, because that page's number shifts once it's sitting inside a combined file.</p>
+
+<table>
+<thead><tr><th>Element</th><th>Survives a merge?</th><th>Why</th></tr></thead>
+<tbody>
+<tr><td>Page text, images, embedded fonts</td><td>Yes</td><td>Copied directly with the page's content stream</td></tr>
+<tr><td>Page-level annotations (highlights, notes, same-page links)</td><td>Usually</td><td>Stored inside the page's own annotation array</td></tr>
+<tr><td>Bookmarks / outline</td><td>No</td><td>Stored at the document level, not per page</td></tr>
+<tr><td>Fillable form fields (AcroForm)</td><td>Often broken</td><td>Widget may render, but the field structure lives at the document level</td></tr>
+<tr><td>Cross-page internal links</td><td>Often broken</td><td>Target page numbers shift once files are combined</td></tr>
+</tbody>
+</table>
+
+<p>If bookmarks or working forms matter, treat merging as a late step: finalize navigation and forms first, merge last, and check the output before sending it out.</p>
+
+<h2><i data-lucide="image"></i> Mixed Page Sizes and Orientations</h2>
+<p>pdf-lib copies each page with its own dimensions intact &mdash; correct behavior, since it doesn't quietly resize or rotate anything to match the rest of the file. Merge a US Letter portrait cover page, an A4 portrait body, and a spreadsheet exported as landscape A3, and the result will visibly jump between sizes and orientations as you scroll. That's not a bug, and no merge order fixes it, because the pages genuinely are different sizes. Rotate a sideways page first with <a href="/rotate-pdf">Rotate PDF</a> if you at least need it right-side up; forcing every page to one uniform size isn't something Merge PDF does, since that means resampling rather than copying. This rarely comes up day-to-day, since source files usually already share a page size.</p>
+
+<h2><i data-lucide="scissors"></i> Extracting a Range vs. Picking Pages by Hand</h2>
+<p>Split PDF's default mode, Extract Specific Pages, takes your selection two ways, and mixing them up is the most common cause of pulling out the wrong pages. Type a range &mdash; pages 12 through 18 &mdash; and it comes out as one contiguous file, in order. Need non-consecutive pages instead, like page 2, page 9, and pages 14&ndash;16 out of a 40-page contract? Click the pages you want on the visual picker instead; they're assembled into the output in whatever order you clicked them. Typing a range when you meant a scattered pick pulls in everything in between, not just what you wanted. (The tool's other mode, splitting every page into its own file, skips selection entirely and is covered next.) If you're not sure which pages you need, it's often quicker to extract a slightly wider range and trim the extras with <a href="/delete-pages">Delete Pages</a> than to redo the selection. For rearranging, deleting, and rotating pages more broadly, see the <a href="/how-to/organize-pdf-pages">page-organizing guide</a>.</p>
+
+<h2><i data-lucide="layers"></i> Splitting One File Into Many</h2>
+<p>Split every page into separate PDFs generates each page as its own file and downloads them one after another rather than bundling them into a zip. On anything longer than a couple of pages, your browser will ask permission for multiple downloads; allow it, or you'll only get the first file or two. This suits tearing 50 individually scanned invoices apart from one combined scan, but for a long document, going all the way to single pages isn't practical &mdash; a few hundred loose files in a downloads folder is its own mess. Extracting in chunks of 20&ndash;30 pages by range is easier to manage.</p>
+
+<h2><i data-lucide="alert-triangle"></i> How Big Is Too Big for a Browser Tab?</h2>
+<p>Because the job runs entirely in memory, the real ceiling is your device's available RAM, not an upload limit. Ordinary office documents &mdash; scanned contracts, invoices, reports up to a couple hundred pages &mdash; merge and split fine on a normal laptop. It gets harder with large, image-heavy scans: a 300-page document scanned at high resolution can run to several hundred megabytes once decoded in memory, on top of whatever else the tab is carrying. If a job stalls, spins, or the tab crashes, that's almost always memory pressure, not a broken file &mdash; close other tabs, quit other heavy applications, and retry. For a genuinely large job, working in stages beats one giant pass: merge two or three files at a time, then merge the results together. If a single source file is enormous, desktop PDF software without a browser tab's memory ceiling is the more realistic tool.</p>
+
+<h2><i data-lucide="alert-triangle"></i> Troubleshooting</h2>
+<ul>
+<li><strong>Nothing happens when I click merge.</strong> Check that every file is an actual PDF, not a scan renamed with a .pdf extension, and that none are password-protected &mdash; pdf-lib can't read an encrypted file, and the tool won't flag which one is the problem.</li>
+<li><strong>The output order is wrong.</strong> Almost always the file list order at the moment you clicked merge. Drag files into sequence before merging; if the file's already generated, fix it with Reorder PDF instead of redoing the merge.</li>
+<li><strong>My file is password-protected.</strong> Merge and split both need to read the actual page content, so an encrypted file has to be unlocked first at <a href="/unlock-pdf">Unlock PDF</a> &mdash; which needs no password if the file opens without one, and otherwise needs you to know it &mdash; then brought back to merge or split.</li>
+<li><strong>The merged file is much bigger than expected.</strong> A merge doesn't compress anything &mdash; it's a direct copy, so output size should roughly track the combined input size. One exception: pdf-lib doesn't deduplicate fonts across files it copies, so merging several documents that share a typeface embeds that font again in each one, and the total can end up larger than the sum of the inputs. Beyond that, a bigger-than-expected result usually just means a source file was already bloated. Compress PDF isn't automatically the fix either: it rasterizes every page into a JPEG and rebuilds the file around it, destroying selectable text, links, and form fields &mdash; fine for a scan-heavy file, a bad trade for a text-heavy contract. See the <a href="/how-to/compress-pdf-without-losing-text">guide to compressing without losing text</a> for what to do when the text layer has to survive.</li>
+</ul>
+
+<blockquote><strong>Heads up:</strong> None of this sends your files anywhere &mdash; merging, splitting, and extracting all happen in your browser's own memory. The flip side is that the tab is the only thing doing the work: there's no server-side job to fall back on if your device runs out of memory, and closing the tab before a download finishes leaves nothing to resume from.</blockquote>
+
+<h2><i data-lucide="help-circle"></i> Frequently Asked Questions</h2>
+
+<h3>Can I merge PDFs that are password-protected?</h3>
+<p>Not directly. An encrypted file can't be opened by pdf-lib until the password is removed, so merging or splitting it will fail. Remove the password with <a href="/unlock-pdf">Unlock PDF</a> first, then merge the unlocked file normally.</p>
+
+<h3>Can I merge a Word document or an image together with my PDFs?</h3>
+<p>Not directly &mdash; Merge PDF only combines files that are already PDFs. Export or print the Word document to PDF first, and turn images into a PDF page with <a href="/images-to-pdf">Images to PDF</a>, then merge everything together.</p>
+
+<h3>Does splitting or extracting pages change my original file?</h3>
+<p>No. Both tools read the original and generate a new, separate PDF to download; the source file on your device is never modified. You can extract the same pages, or a different selection, from the same original as many times as you like.</p>
+
+<h3>Will the merged file still have selectable, searchable text?</h3>
+<p>Yes, as long as the source pages already had real text rather than being flat scanned images. Merging only copies existing content &mdash; it doesn't add or remove a text layer, so a scanned page with no text before the merge still won't have one after.</p>
+
+<h3>Can I merge or split PDFs on my phone?</h3>
+<p>Yes &mdash; it's the same web page in a mobile browser. The memory limits above bite sooner on a phone, though, since phones typically have less available RAM than a laptop; a merge that's effortless on a desktop can stall a mobile tab. For a large batch, a laptop is more forgiving.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="/how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="/how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="/how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="/how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="/how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="/how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="/">All 14 tools</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

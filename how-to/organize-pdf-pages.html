@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="../favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete, Rotate, Reorder &amp; Number PDF Pages - PDFCraft</title>
+    <meta name="description" content="How PDF page deletion, rotation, reordering, and numbering work under the hood, plus a worked example assembling a signed contract in the right order.">
+    <link rel="canonical" href="https://pdf-craft.online/how-to/organize-pdf-pages">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+    
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pdf-craft.online/how-to/organize-pdf-pages">
+    <meta property="og:title" content="Delete, Rotate, Reorder &amp; Number PDF Pages - PDFCraft">
+    <meta property="og:description" content="How PDF page deletion, rotation, reordering, and numbering work under the hood, plus a worked example assembling a signed contract in the right order.">
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TechArticle Schema for Google Rich Snippets -->
+<link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="../opensearch.xml">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Delete, Rotate, Reorder and Number PDF Pages",
+  "description": "How PDF page deletion, rotation, reordering, and numbering work under the hood, plus a worked example assembling a signed contract in the right order.",
+  "image": "https://pdf-craft.online/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pdf-craft.online/favicon-192x192.png"
+    }
+  },
+  "mainEntityOfPage": "https://pdf-craft.online/how-to/organize-pdf-pages",
+  "inLanguage": "en",
+  "datePublished": "2026-08-12",
+  "dateModified": "2026-08-12"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "I deleted the wrong page — can I get it back?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not from the tool itself. Delete rebuilds the file from only the pages you kept, so the removed page's data isn't retained anywhere — not in the output, and not on this site's servers, since nothing was uploaded in the first place. Keep your original file until you've confirmed the output is correct."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my rotated PDF look fine in the site's preview but sideways when I email it to someone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "This almost always means the recipient's viewer is an older or embedded one that doesn't honor the /Rotate attribute — rare among modern software, but it turns up in some corporate viewers and older print drivers. Try a different, current viewer (Acrobat Reader, Chrome, or Preview) before assuming the tool made a mistake."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I number only the pages after the cover page?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes — Page Numbers lets you set a page range to number, so you can start at page 2 and leave the cover untouched, and set the starting number so the first numbered page reads \"1\" instead of \"2\"."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does reordering pages change the file size?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only marginally, and usually not enough to notice. Reorder rebuilds the document by copying each page across in the new sequence — it's not compressing or re-encoding anything, so file size stays essentially the same before and after."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "If I rotate a page 90 degrees, then rotate it 90 degrees again, is that the same as rotating it 180 degrees once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Rotation is stored as a single value on the page (0, 90, 180, or 270), and each rotate action adds to the current value and wraps around at 360. Two 90-degree rotations in the same direction land you at 180, identical to doing it in one step."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "I need to remove a page number that's part of the original scanned content, not one I added. Can any of these tools do that?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. All four tools here work with whole pages, sequence, or new overlaid text — none can detect or erase existing content. Your options are deleting the whole page if the number is the only thing you need gone (rarely practical), covering it with the Black Box in Sign & Edit (hides it visually, leaves the text extractable, per the caveat above), or sourcing a version without it."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="page-flow page-doc">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="/#tools">Tools</a>
+                <a href="/#guides">Guides</a>
+                <a href="/security">Security</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <header class="privacy-header">
+            <h1>How to Delete, Rotate, Reorder and Number PDF Pages</h1>
+            <p class="file-spec">What each page tool actually changes in the file, and a worked example that uses all four together.</p>
+        </header>
+
+        <article class="privacy-content">
+<p>Four operations get lumped together as "page housekeeping" because they all live on the same toolbar: delete, rotate, reorder, and number. They behave very differently under the hood, though, and mixing them up causes real problems &mdash; someone deletes a page thinking it's the same as covering it up, or rotates a scan and can't figure out why it still looks sideways somewhere else. This guide covers what each of the four operations actually changes inside the PDF file, plus a worked example that uses all four in sequence.</p>
+
+<h2><i data-lucide="scissors"></i> Deleting pages</h2>
+<p><a href="/delete-pages">Delete Pages</a> removes one or more pages entirely &mdash; a single page, a range (pages 4&ndash;9), or a scattered list (2, 5, 11). It builds a brand-new document and copies over only the pages you keep, so removed pages' content and images never reach the output. It also refuses to delete every page &mdash; at least one must remain &mdash; so to keep just one page out of ten, <a href="/split-pdf">Split PDF</a> is the more direct tool.</p>
+<p>This is the only one of the four operations here that actually removes content. If a page has sensitive information on it, deleting it is the right move &mdash; a black box over the text is not the same, since the text stays selectable underneath (see the <a href="/how-to/redact-and-remove-pdf-content">redaction guide</a>). Deletion only helps when the whole page needs to go; removing part of a page needs the flattening approach covered there instead.</p>
+<p>Practical note: deleting pages renumbers everything after the deletion point. Delete first and number last, or you'll end up with a document that jumps from "Page 3" straight to "Page 7".</p>
+
+<h2><i data-lucide="rotate-cw"></i> Rotating pages</h2>
+<p><a href="/rotate-pdf">Rotate PDF</a> spins individual pages or the whole document 90, 180, or 270 degrees. It's worth knowing what's actually happening, so a page that still looks wrong somewhere else isn't a mystery.</p>
+<p>A PDF page has a fixed content stream &mdash; the actual drawing instructions &mdash; and a separate <code>/Rotate</code> attribute telling a viewer "display this rotated by N degrees." Rotating here only changes that value; the content stream is untouched. Major viewers respect it, including Acrobat, Chrome, Preview, and pdf.js, which powers this site's own preview.</p>
+<p>Scanned documents are where this causes confusion. A scan is a single embedded image per page. If the scanning app baked the rotation into the pixels, the <code>/Rotate</code> flag is irrelevant &mdash; it looks sideways everywhere. If it left the pixels as-captured and only set the flag, an older viewer that ignores <code>/Rotate</code> can still show it sideways even though it's fine here. If a page still looks wrong after rotating it, the pixels themselves are almost certainly what's rotated, not the flag &mdash; rotate again in the needed direction; there's no way to fix baked-in pixels without a quality loss from re-encoding.</p>
+<p>Rotation never changes page count, page order, or any other page's content &mdash; it's a metadata change, page by page.</p>
+
+<h2><i data-lucide="layers"></i> Reordering pages</h2>
+<p><a href="/reorder-pdf">Reorder PDF</a> changes the sequence pages appear in without touching a single page's content. It's one card per drag, though &mdash; there's no multi-select or block-move in this workspace, so relocating a six-page appendix means six separate drags, one page at a time. Moving a large block often is usually faster done by pulling those pages out with <a href="/split-pdf">Split PDF</a> and reassembling with <a href="/merge-pdf">Merge PDF</a> in the order you want; the <a href="/how-to/merge-and-split-pdf-without-uploading">merge and split guide</a> covers how those two tools rebuild a document.</p>
+<p>Internally, Reorder builds a brand-new document and copies each page into it in the sequence you set &mdash; the same create-and-copy approach used by Delete Pages and Split. Nothing about an individual page's content, size, or rotation changes in the process, and page count stays identical, which makes it safe to experiment with since undoing a reorder costs nothing but time.</p>
+
+<h2><i data-lucide="hash"></i> Adding page numbers</h2>
+<p><a href="/number-pdf">Page Numbers</a> draws numeral text onto each page in a standard font, positioned at a corner or centered top/bottom. You can set a starting number (useful if this is volume 2 of something continuing from 47) and restrict numbering to a page range &mdash; skip a cover page, number only the body, and so on.</p>
+<p>The limitation: this draws new text on top of existing content &mdash; it doesn't detect, read, or replace numbers already printed on the page. Run a scanned chapter that already shows "142" at the bottom through this tool starting at "1," and you'll get both numbers stacked in the same corner; there's no OCR step that erases the old one. If a document already has numbers you don't want, cover them with the Black Box in <a href="/sign-pdf">Sign &amp; Edit</a> (hides rather than removes them, per the caveat above) or source a copy without the printed numbers.</p>
+<p>Numbering doesn't change page count or order, and nothing is deleted &mdash; but once new numbers are baked in, there's no undo short of re-running the tool on the original file.</p>
+
+<h2><i data-lucide="file-text"></i> Worked example: assembling a signed contract</h2>
+<p>Here's a scenario using all four tools in the order they actually come up: a four-page digital contract, plus a signature page you printed, signed by hand, and scanned back in as its own single-page PDF. The goal is one clean, correctly ordered, numbered document to send back.</p>
+<ol>
+<li><strong>Check the scan's rotation first.</strong> Phone scanning apps often save the signature page sideways or upside down. Look before doing anything else.</li>
+<li><strong>Rotate the scanned page if needed.</strong> Use <a href="/rotate-pdf">Rotate PDF</a> on the scan alone before merging &mdash; easier than hunting for it inside a merged file.</li>
+<li><strong>Merge the two files.</strong> Use <a href="/merge-pdf">Merge PDF</a> to combine the digital original (pages 1&ndash;4) with the corrected scan; ordering comes next.</li>
+<li><strong>Reorder if needed.</strong> If the signature page should be page 5 and the merge already put it there, you're done; otherwise use <a href="/reorder-pdf">Reorder PDF</a> to drag it into place.</li>
+<li><strong>Number last.</strong> Once order and rotation are final, run <a href="/number-pdf">Page Numbers</a> across all 5 pages &mdash; numbering earlier risks numbers landing on the wrong pages.</li>
+</ol>
+<p>The order isn't arbitrary &mdash; rotation and merging come first since they're most likely to reveal a problem, reordering depends on the final page count, and numbering depends on the final order. Numbering early, while the document is still being assembled, is the most common mistake people make.</p>
+
+<h2><i data-lucide="table"></i> What each operation actually changes</h2>
+<table>
+<thead>
+<tr><th>Operation</th><th>Page content</th><th>Page order</th><th>Page count</th><th>Adds new marks</th></tr>
+</thead>
+<tbody>
+<tr><td>Delete pages</td><td>Removed pages' content is gone</td><td>Unchanged for remaining pages</td><td>Decreases</td><td>No</td></tr>
+<tr><td>Rotate pages</td><td>Unchanged (only <code>/Rotate</code> flag changes)</td><td>Unchanged</td><td>Unchanged</td><td>No</td></tr>
+<tr><td>Reorder pages</td><td>Unchanged</td><td>Changes</td><td>Unchanged</td><td>No</td></tr>
+<tr><td>Add page numbers</td><td>Unchanged pages get new text drawn on top</td><td>Unchanged</td><td>Unchanged</td><td>Yes &mdash; permanently</td></tr>
+</tbody>
+</table>
+
+<h2><i data-lucide="wifi-off"></i> Where these run and what to expect</h2>
+<p>All four operations run entirely in your browser &mdash; the PDF never leaves your device. Delete, reorder, and rotate are handled by pdf-lib and are effectively instant even on large documents. Numbering is slightly heavier since a new text object is drawn on every selected page, but still a fraction of a second per page. None of the four rasterizes anything, so unlike <a href="/compress-pdf">Compress</a>, existing text, embedded fonts, links, and form fields pass through untouched, except on pages you delete outright.</p>
+<p>Very large, image-heavy scans can be slow to load into the page-preview grid used by reorder and delete, simply because the browser renders a thumbnail of every page &mdash; a preview cost, not a sign anything's wrong with the operation itself.</p>
+
+<blockquote><strong>Heads up:</strong> none of these four tools edit existing page content &mdash; they remove whole pages, flip a display flag, change sequence, or draw new marks on top. If your actual goal is to change or permanently erase specific text or an image already on a page, see the <a href="/how-to/redact-and-remove-pdf-content">redaction guide</a> for what genuinely removes content versus what only covers it up.</blockquote>
+
+<h2><i data-lucide="help-circle"></i> Frequently Asked Questions</h2>
+
+<h3>I deleted the wrong page &mdash; can I get it back?</h3>
+<p>Not from the tool itself. Delete rebuilds the file from only the pages you kept, so the removed page's data isn't retained anywhere &mdash; not in the output, and not on this site's servers, since nothing was uploaded in the first place. Keep your original file until you've confirmed the output is correct.</p>
+
+<h3>Why does my rotated PDF look fine in the site's preview but sideways when I email it to someone?</h3>
+<p>This almost always means the recipient's viewer is an older or embedded one that doesn't honor the <code>/Rotate</code> attribute &mdash; rare among modern software, but it turns up in some corporate viewers and older print drivers. Try a different, current viewer (Acrobat Reader, Chrome, or Preview) before assuming the tool made a mistake.</p>
+
+<h3>Can I number only the pages after the cover page?</h3>
+<p>Yes &mdash; Page Numbers lets you set a page range to number, so you can start at page 2 and leave the cover untouched, and set the starting number so the first numbered page reads "1" instead of "2".</p>
+
+<h3>Does reordering pages change the file size?</h3>
+<p>Only marginally, and usually not enough to notice. Reorder rebuilds the document by copying each page across in the new sequence &mdash; it's not compressing or re-encoding anything, so file size stays essentially the same before and after.</p>
+
+<h3>If I rotate a page 90 degrees, then rotate it 90 degrees again, is that the same as rotating it 180 degrees once?</h3>
+<p>Yes. Rotation is stored as a single value on the page (0, 90, 180, or 270), and each rotate action adds to the current value and wraps around at 360. Two 90-degree rotations in the same direction land you at 180, identical to doing it in one step.</p>
+
+<h3>I need to remove a page number that's part of the original scanned content, not one I added. Can any of these tools do that?</h3>
+<p>No. All four tools here work with whole pages, sequence, or new overlaid text &mdash; none can detect or erase existing content. Your options are deleting the whole page if the number is the only thing you need gone (rarely practical), covering it with the Black Box in <a href="/sign-pdf">Sign &amp; Edit</a> (hides it visually, leaves the text extractable, per the caveat above), or sourcing a version without it.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="/how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="/how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="/how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="/how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="/how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="/how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="/">All 14 tools</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

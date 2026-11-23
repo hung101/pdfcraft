@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="icon" href="../favicon-32x32.png" type="image/png" sizes="32x32">
+    <link rel="icon" href="../favicon-48x48.png" type="image/png" sizes="48x48">
+    <link rel="icon" href="../favicon-96x96.png" type="image/png" sizes="96x96">
+    <link rel="icon" href="../favicon-192x192.png" type="image/png" sizes="192x192">
+    <link rel="icon" href="../icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../apple-touch-icon.png">
+    <meta charset="UTF-8">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https://*.google.com https://*.g.doubleclick.net https://ko-fi.com; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google-analytics.com https://region1.google-analytics.com https://*.google.com https://*.doubleclick.net; frame-src 'self'; worker-src 'self' blob:; media-src 'none'; object-src 'none';">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Edit Existing Text in a PDF - PDFCraft</title>
+    <meta name="description" content="Change text that is already in a PDF, in your browser. How replacement differs from drawing over the old text, what it cannot do, and how to check the result.">
+    <link rel="canonical" href="https://pdf-craft.online/how-to/edit-existing-pdf-text">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400..800&display=swap" rel="stylesheet">
+    
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../styles.css?v=35">
+    <!-- Lucide Icons -->
+    <script src="/lib/lucide-1.31.0.min.js"></script>
+    
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2GVR3FL3H0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-2GVR3FL3H0');
+    </script>
+    
+    <!-- Social Sharing Media (Open Graph & Twitter Banners) -->
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://pdf-craft.online/how-to/edit-existing-pdf-text">
+    <meta property="og:title" content="How to Edit Existing Text in a PDF - PDFCraft">
+    <meta property="og:description" content="Change text that is already in a PDF, in your browser. How replacement differs from drawing over the old text, what it cannot do, and how to check the result.">
+    <meta property="og:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta property="og:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:image" content="https://pdf-craft.online/og-image.jpg">
+    <meta name="twitter:image:alt" content="PDFCraft: Edit, merge and sign PDFs without uploading them. Fourteen free tools that run inside your browser tab.">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- TechArticle Schema for Google Rich Snippets -->
+<link rel="search" type="application/opensearchdescription+xml" title="PDFCraft" href="../opensearch.xml">
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "How to Edit the Text Already Inside a PDF",
+  "description": "Change text that is already in a PDF, in your browser. How replacement differs from drawing over the old text, what it cannot do, and how to check the result.",
+  "image": "https://pdf-craft.online/og-image.jpg",
+  "author": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "url": "https://pdf-craft.online/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "PDFCraft",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://pdf-craft.online/favicon-192x192.png"
+    }
+  },
+  "mainEntityOfPage": "https://pdf-craft.online/how-to/edit-existing-pdf-text",
+  "inLanguage": "en",
+  "datePublished": "2026-09-06",
+  "dateModified": "2026-09-06"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the old text really gone, or just hidden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Really gone. The instruction that drew it is removed from the page's content stream before the file is written, so it is not recoverable by selecting, searching, or extracting the raw streams with a low-level tool. That is the difference between this and drawing a box over it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Why does my replacement look slightly different from the surrounding text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Because it is drawn in a substitute font. Your PDF almost certainly embeds only the glyphs its author used, so the characters you typed are not available in the original font. The tool matches family, weight and size as closely as it can and tells you which font it used."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I edit a whole paragraph at once?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not as one action. You replace one run of text at a time &mdash; usually a line or a phrase. There is no reflow, so rewriting a paragraph to a different length will not re-wrap it. For substantial rewrites, going back to the source document is genuinely the better path."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Nothing is outlined when I open my PDF. What went wrong?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most likely the page is a scan, so it contains images rather than text. It can also happen when text lives inside a form field or an annotation rather than the page itself. Either way there is no text operator to replace."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this work offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Load the page once and you can disconnect &mdash; every library it needs, including the renderer, is served from this site and cached. That is also the simplest proof that your document is not going anywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I use this to redact a confidential document?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can use it to remove specific text, and that removal is real. But redaction usually means being certain that nothing sensitive survives anywhere in the file &mdash; including metadata, annotations and other pages. For that, read the guide on removing content properly and verify the output yourself."
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="page-flow page-doc">
+    <script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.body.classList.add(t+'-theme')}catch(e){}</script>
+
+    <header class="site-bar">
+        <div class="wrap">
+            <a class="site-brand" href="/">
+                <svg class="brand-mark" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="6.5"/><circle cx="12" cy="12" r="2.2" fill="currentColor" stroke="none"/><path d="M12 1.5v6M12 16.5v6M1.5 12h6M16.5 12h6"/></svg>
+                PDFCraft
+            </a>
+            <nav class="site-nav" aria-label="Site">
+                <a href="/#tools">Tools</a>
+                <a href="/#guides">Guides</a>
+                <a href="/security">Security</a>
+                <a href="/about">About</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="privacy-container">
+        <header class="privacy-header">
+            <h1>How to Edit the Text Already Inside a PDF</h1>
+            <p class="file-spec">What really happens when you change PDF text, and how to do it without uploading the file</p>
+        </header>
+
+        <article class="privacy-content">
+<p>Someone has spotted the wrong figure in a PDF you sent, the source document is three laptops ago, and every "PDF editor" you try either wants your file on its server or quietly draws the new number on top of the old one. This guide is about what actually happens when you edit text inside a PDF, why it is harder than editing a Word file, and how to do it here without the document leaving your machine.</p>
+
+<p>The short version: a PDF is not a document in the sense a word processor means. It is a set of drawing instructions. Understanding that one fact explains every limitation below.</p>
+
+<h2><i data-lucide="file-text"></i> Why PDFs Resist Editing</h2>
+
+<p>Open a page's internals and you will not find paragraphs. You will find a content stream &mdash; a list of operators that say things like "select font F1 at 16 points", "move to x=57, y=758", "show this run of glyphs". Text is a series of positioned marks, with no memory of the sentence it belonged to.</p>
+
+<p>Two consequences follow immediately. First, there is nothing to reflow: if your replacement is wider than the original, nothing after it moves out of the way, because nothing knows they are related. Second, a line you see as one phrase is often several separate instructions. In a real test file the phrase "Dummy PDF file" is drawn by <strong>six</strong> distinct operators &mdash; the producer split it to control letter spacing. Replace only the one you clicked and most of the original stays on the page.</p>
+
+<p>There is a third complication that catches most tools out. The bytes inside a text operator are usually not characters. Most PDFs embed a <em>subset</em> of a font containing only the glyphs the author actually used, and the operator refers to positions in that subset. So <code>&lt;01020303&gt;</code> might draw "Hello". You cannot read the text out of the stream without the font's mapping table, and you cannot type new characters that the subset does not contain.</p>
+
+<h2><i data-lucide="layers"></i> Two Very Different Things Called "Editing"</h2>
+
+<p>Almost every tool that claims to edit PDF text does one of two things, and the difference matters enormously if the document is confidential.</p>
+
+<p><strong>Overlay.</strong> The tool draws new content on top of the page. It is simple, it always works, and the original text is still in the file underneath. Anyone can select it, copy it, or extract it with a parser. Our <a href="/sign-pdf">Sign &amp; Edit</a> tool is deliberately this: it adds text, signatures and boxes on top, and it never claims to remove anything.</p>
+
+<p><strong>Replacement.</strong> The tool finds the instruction that draws the original text, removes it, and draws the replacement instead. The old text is genuinely not in the output. This is what <a href="/edit-pdf-text">Edit PDF Text</a> does.</p>
+
+<table>
+<thead><tr><th>Approach</th><th>Original text removed?</th><th>Visual fidelity</th><th>Use when</th></tr></thead>
+<tbody>
+<tr><td>Draw a box over it</td><td>No &mdash; fully extractable</td><td>Perfect</td><td>Never, if the point is concealment</td></tr>
+<tr><td>Overlay new text on top</td><td>No</td><td>Good</td><td>Adding a signature, date or note</td></tr>
+<tr><td>Replace the operator (this tool)</td><td><strong>Yes</strong></td><td>Font substituted</td><td>Fixing wrong text in a file you cannot regenerate</td></tr>
+<tr><td>Flatten the page to an image</td><td>Yes &mdash; all text becomes pixels</td><td>Loses selectable text</td><td>Removing part of a page permanently</td></tr>
+<tr><td>Edit the source and re-export</td><td>Yes</td><td>Perfect</td><td>Always, when you still have the source</td></tr>
+</tbody>
+</table>
+
+<p>That last row is not a joke. If you have the original document, go back to it. Every PDF-level edit is a compromise; the only question is which compromise you can live with.</p>
+
+<h2><i data-lucide="type"></i> How to Replace Text Here</h2>
+
+<ol>
+<li>Open <a href="/edit-pdf-text">Edit PDF Text</a> and drop your PDF in. It is read in your browser; nothing is uploaded.</li>
+<li>The page renders with every editable run of text outlined. Click one.</li>
+<li>The original appears in a box, with an input pre-filled with the same text. Change it and press Enter, or click Save.</li>
+<li>Edited runs turn green. Repeat across as many runs and pages as you need &mdash; edits accumulate in a list before anything is written.</li>
+<li>Click <strong>Apply &amp; Build PDF</strong>, read the notes it gives you, then download.</li>
+</ol>
+
+<p>Clicking one visible phrase claims every text operator sitting on that baseline within it, so the fragmentation problem above is handled for you: you replace what you see, not one sixth of it.</p>
+
+<h2><i data-lucide="alert-triangle"></i> What It Cannot Do, and Why</h2>
+
+<p>These are consequences of the format, not shortcuts. Each one is reported to you rather than guessed at.</p>
+
+<ul>
+<li><strong>The replacement is drawn in a substitute font.</strong> The page's own font is usually a subset without the characters you just typed, so the tool picks the closest standard font &mdash; Helvetica, Times or Courier &mdash; from the original's name. Expect slightly different letter shapes and spacing. On a body-text line this is often invisible; in a logo or heading it will not be.</li>
+<li><strong>Nothing reflows.</strong> Text after your edit on the same line stays exactly where it was. A longer replacement can overlap it; a shorter one leaves a gap. The tool tells you how wide your replacement came out so you know what to check.</li>
+<li><strong>Rotated, skewed and vertical text is refused.</strong> Replacements are drawn horizontally, so anything on an angle would land wrong. Better to decline than to produce a crooked document.</li>
+<li><strong>Only Western European characters.</strong> The standard fonts are WinAnsi-encoded. Typing Chinese, Japanese, Arabic or Cyrillic is blocked before the file is touched rather than failing halfway through.</li>
+<li><strong>Scanned pages have no text to edit.</strong> If your PDF is photographs of paper, there are no text operators at all &mdash; nothing will be outlined. That needs OCR, which this tool does not do.</li>
+<li><strong>Password-protected files must be unlocked first.</strong> Use <a href="/unlock-pdf">Unlock PDF</a> if you know the password.</li>
+</ul>
+
+<p>In every one of those cases a refused edit leaves the original untouched. You will never get back a half-modified document.</p>
+
+<blockquote><strong>Heads up:</strong> keep your original until you have opened the download and read it. Not because the edit is unreliable &mdash; the text really is replaced &mdash; but because font substitution and the lack of reflow are visual changes that only your eyes can judge. No tool can tell you whether the result still looks right.</blockquote>
+
+<h2><i data-lucide="check-circle"></i> Checking It Actually Worked</h2>
+
+<p>Do not take our word for it, and do not take any tool's word for it. Open the downloaded file and try three things:</p>
+
+<ol>
+<li><strong>Select the area and copy it.</strong> Paste into a text editor. You should see your new text and no sign of the old.</li>
+<li><strong>Search the document</strong> for a distinctive word from the original. Zero results is the answer you want. This is the check that exposes tools which only drew a box.</li>
+<li><strong>Look at the line.</strong> Confirm the replacement has not run into whatever follows it.</li>
+</ol>
+
+<p>If you need content gone rather than corrected &mdash; a name, an account number, a whole clause &mdash; replacement is not the right operation. Deleting the page or flattening it to an image is more reliable, and <a href="/how-to/redact-and-remove-pdf-content">how to actually remove content from a PDF</a> covers exactly that, including why black rectangles do not count.</p>
+
+<h2><i data-lucide="shield"></i> Why Doing This Locally Matters Here</h2>
+
+<p>Editing text means the tool must parse and rewrite the deepest internals of your document. If that happens on someone else's server, the entire file &mdash; every clause, figure and name in it &mdash; is on their infrastructure for as long as their retention policy says. For a contract or a payslip that is often the exact thing your employer's policy prohibits.</p>
+
+<p>Here the rewriting happens in your tab. The processing code makes no network calls, and the libraries it uses are served from this site rather than a third-party CDN, so no outside party can change the code that touches your document. If you want to confirm that rather than trust it, <a href="/how-to/safe-online-pdf-tools-confidential-documents">are online PDF tools safe for confidential documents?</a> shows you how to check any tool, including this one.</p>
+
+<h2><i data-lucide="help-circle"></i> Frequently Asked Questions</h2>
+
+<h3>Is the old text really gone, or just hidden?</h3>
+<p>Really gone. The instruction that drew it is removed from the page's content stream before the file is written, so it is not recoverable by selecting, searching, or extracting the raw streams with a low-level tool. That is the difference between this and drawing a box over it.</p>
+
+<h3>Why does my replacement look slightly different from the surrounding text?</h3>
+<p>Because it is drawn in a substitute font. Your PDF almost certainly embeds only the glyphs its author used, so the characters you typed are not available in the original font. The tool matches family, weight and size as closely as it can and tells you which font it used.</p>
+
+<h3>Can I edit a whole paragraph at once?</h3>
+<p>Not as one action. You replace one run of text at a time &mdash; usually a line or a phrase. There is no reflow, so rewriting a paragraph to a different length will not re-wrap it. For substantial rewrites, going back to the source document is genuinely the better path.</p>
+
+<h3>Nothing is outlined when I open my PDF. What went wrong?</h3>
+<p>Most likely the page is a scan, so it contains images rather than text. It can also happen when text lives inside a form field or an annotation rather than the page itself. Either way there is no text operator to replace.</p>
+
+<h3>Does this work offline?</h3>
+<p>Yes. Load the page once and you can disconnect &mdash; every library it needs, including the renderer, is served from this site and cached. That is also the simplest proof that your document is not going anywhere.</p>
+
+<h3>Can I use this to redact a confidential document?</h3>
+<p>You can use it to remove specific text, and that removal is real. But redaction usually means being certain that nothing sensitive survives anywhere in the file &mdash; including metadata, annotations and other pages. For that, read <a href="/how-to/redact-and-remove-pdf-content">the guide on removing content properly</a> and verify the output yourself.</p>
+        </article>
+    </main>
+
+    <footer class="site-footer">
+        <div class="wrap">
+            <div class="cols">
+                <div class="guides">
+                    <h2>Guides</h2>
+                    <ul>
+                        <li><a href="/how-to/safe-online-pdf-tools-confidential-documents">Is it safe to use online PDF tools?</a></li>
+                        <li><a href="/how-to/edit-existing-pdf-text">Edit existing PDF text</a></li>
+                        <li><a href="/how-to/merge-and-split-pdf-without-uploading">Merge and split without uploading</a></li>
+                        <li><a href="/how-to/organize-pdf-pages">Organize PDF pages</a></li>
+                        <li><a href="/how-to/convert-between-pdf-and-images">Convert between PDF and images</a></li>
+                        <li><a href="/how-to/compress-pdf-without-losing-text">Compress without losing text</a></li>
+                        <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
+                        <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
+                        <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h2>PDFCraft</h2>
+                    <ul>
+                        <li><a href="/">All 14 tools</a></li>
+                        <li><a href="/privacy">Privacy</a></li>
+                        <li><a href="/security">Security</a></li>
+                        <li><a href="/about">About</a></li>
+                        <li><a href="/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <p class="note">No ads and no account. If PDFCraft saved you some time, you can <a href="https://ko-fi.com/pdfcraft" target="_blank" rel="noopener">support it on Ko-fi</a>.</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Initialize Lucide icons
+        if (window.lucide) {
+            window.lucide.createIcons();
+        }
+    </script>
+</body>
+</html>

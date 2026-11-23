@@ -1,0 +1,7 @@
+# Robots.txt file for PDFCraft
+# Allows indexing of all pages and references the XML sitemap.
+
+User-agent: *
+Allow: /
+
+Sitemap: https://pdf-craft.online/sitemap.xml
