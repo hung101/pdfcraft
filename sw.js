@@ -1,4 +1,4 @@
-const CACHE_NAME = 'pdfcraft-cache-v41';
+const CACHE_NAME = 'pdfcraft-cache-v42';
 const ASSETS_TO_CACHE = [
   '/',
   '/index.html',
@@ -31,6 +31,7 @@ const ASSETS_TO_CACHE = [
   '/how-to/redact-and-remove-pdf-content.html',
   '/how-to/edit-existing-pdf-text.html',
   '/how-to/add-watermark-to-pdf.html',
+  '/how-to/merge-password-protected-pdfs.html',
   '/lib/jszip-3.10.1.min.js',
   '/lib/lucide-1.31.0.min.js',
   '/lib/pdf-3.4.120.min.js',

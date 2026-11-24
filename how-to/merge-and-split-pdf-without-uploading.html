@@ -186,7 +186,7 @@
 
 <h2><i data-lucide="alert-triangle"></i> Troubleshooting</h2>
 <ul>
-<li><strong>Nothing happens when I click merge.</strong> Check that every file is an actual PDF, not a scan renamed with a .pdf extension, and that none are password-protected &mdash; pdf-lib can't read an encrypted file, and the tool won't flag which one is the problem.</li>
+<li><strong>Nothing happens when I click merge.</strong> Check that every file is an actual PDF, not a scan renamed with a .pdf extension, and that none are password-protected &mdash; pdf-lib can't read an encrypted file. If one is, the tool names it and says how to unlock it.</li>
 <li><strong>The output order is wrong.</strong> Almost always the file list order at the moment you clicked merge. Drag files into sequence before merging; if the file's already generated, fix it with Reorder PDF instead of redoing the merge.</li>
 <li><strong>My file is password-protected.</strong> Merge and split both need to read the actual page content, so an encrypted file has to be unlocked first at <a href="/unlock-pdf">Unlock PDF</a> &mdash; which needs no password if the file opens without one, and otherwise needs you to know it &mdash; then brought back to merge or split.</li>
 <li><strong>The merged file is much bigger than expected.</strong> A merge doesn't compress anything &mdash; it's a direct copy, so output size should roughly track the combined input size. One exception: pdf-lib doesn't deduplicate fonts across files it copies, so merging several documents that share a typeface embeds that font again in each one, and the total can end up larger than the sum of the inputs. Beyond that, a bigger-than-expected result usually just means a source file was already bloated. Compress PDF isn't automatically the fix either: it rasterizes every page into a JPEG and rebuilds the file around it, destroying selectable text, links, and form fields &mdash; fine for a scan-heavy file, a bad trade for a text-heavy contract. See the <a href="/how-to/compress-pdf-without-losing-text">guide to compressing without losing text</a> for what to do when the text layer has to survive.</li>
@@ -197,7 +197,7 @@
 <h2><i data-lucide="help-circle"></i> Frequently Asked Questions</h2>
 
 <h3>Can I merge PDFs that are password-protected?</h3>
-<p>Not directly. An encrypted file can't be opened by pdf-lib until the password is removed, so merging or splitting it will fail. Remove the password with <a href="/unlock-pdf">Unlock PDF</a> first, then merge the unlocked file normally.</p>
+<p>Not directly. An encrypted file can't be opened by pdf-lib until the password is removed, so merging or splitting it will fail. Remove the password with <a href="/unlock-pdf">Unlock PDF</a> first, then merge the unlocked file normally. The <a href="/how-to/merge-password-protected-pdfs">guide to merging password-protected PDFs</a> covers the whole process, including adding a password back afterwards.</p>
 
 <h3>Can I merge a Word document or an image together with my PDFs?</h3>
 <p>Not directly &mdash; Merge PDF only combines files that are already PDFs. Export or print the Word document to PDF first, and turn images into a PDF page with <a href="/images-to-pdf">Images to PDF</a>, then merge everything together.</p>
@@ -228,6 +228,7 @@
                         <li><a href="/how-to/protect-pdf-with-password">Protect a PDF with a password</a></li>
                         <li><a href="/how-to/redact-and-remove-pdf-content">Remove content from a PDF</a></li>
                         <li><a href="/how-to/add-watermark-to-pdf">Add a watermark</a></li>
+                        <li><a href="/how-to/merge-password-protected-pdfs">Merge password-protected PDFs</a></li>
                     </ul>
                 </div>
                 <div>
